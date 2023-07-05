@@ -69,7 +69,7 @@ safety = "^2.3.5"
 
 [tool.poetry.group.dev.dependencies]
 blue = "^0.9.1"
-black = "*"
+black = {extras = ["all"], version = "*"}
 isort = "^5.12.0"
 mypy = "^1.4.1"
 mypy-extensions = "^1.0.0"
@@ -194,6 +194,7 @@ profile = "black"
 known_first_party = "poetry"
 skip = [".gitignore", ".dockerignore"]
 skip_glob = ["example/*"]
+extend_skip_glob = ["my_*_module.py"]
 multi_line_output = 3
 include_trailing_comma = true
 
@@ -265,8 +266,8 @@ disable = [
     # Many functions (e.g. callbacks) will naturally have unused arguments.
     "unused-argument",
 
-    # Disable checking that method could be a function in classes (often used for organisation).
-    "no-self-use",
+    # # Disable checking that method could be a function in classes (often used for organisation).
+    # "no-self-use",
 
     # Disable failure for TODO items in the codebase (code will always have TODOs).
     "fixme",
@@ -311,8 +312,6 @@ envlist =
     flake8
     mypy
     pylint
-    py36
-    py37
     py38
     py39
     py310
@@ -322,6 +321,7 @@ envlist =
 ;basepython = python3
 
 [testenv]
+allowlist_externals = poetry
 whitelist_externals = poetry
 skip_install = true
 commands =
@@ -355,7 +355,7 @@ deps =
     mypy
     types-toml
 commands = poetry run task lint_mypy
- 
+
 [testenv:pydocstyle]
 commands = poetry run task lint_pydocstyle
 
@@ -374,21 +374,24 @@ commands = poetry run task safety
 
 
 [tool.taskipy.tasks]
-bandit={help='', cmd='poetry run bandit -c pyproject.toml -r .'}
-lint_black={help='Checking with black', cmd='echo --black--; poetry run black --check --diff incolume tests'}
+bandit={help='', cmd='poetry run bandit -c pyproject.toml -r incolume/ test/'}
+clean = {cmd = "echo -n 'Starting cleanning environment..'; find ./ \\( -name '*.pyc' -o -name '*~' -o -name '*.log' -o -name '*.log.*' -o -name '.cache' \\) -delete ; echo ' ok' ",  help = "Shallow clean into environment (.pyc, .cache, .egg, .log, et all)" }
+pre_clean-all = {cmd='poetry run task clean', help=''}
+clean-all = {cmd = "echo -n 'Starting Deep cleanning ..'; find ./ \\( -name '*_cache' -o -name '*cache__' -o -name dist -o -name build -o -name .tox \\) -exec rm -rf {} 2> /dev/null \\; ; echo ' Deep cleaning finished!' ",  help = "Deep cleanning into environment (dist, build, htmlcov, .tox, *_cache, et all)" }
+docs = {help="Generate documentation", cmd="poetry run mkdocs serve"}
+pre_lint="task lint_blue && task lint_isort && task lint_flake8 && task lint_pydocstyle && task lint_pylint && task lint_mypy"
+lint={help='Checking all linters configurated', cmd=''}
+lint_black={help='Checking with black', cmd='echo --black--; poetry run black --check --diff incolume/ tests/'}
+lint_blue={help='Checking with blue', cmd='echo --blue--; poetry run blue --check --diff incolume/ tests/'}
 lint_flake8={help='Checking with flake8', cmd='echo --flake8--; poetry run flake8 --config pyproject.toml incolume/ tests/'}
-lint_isort={help='Checking with isort', cmd='echo --isort--; poetry run isort --check --atomic --py all incolume/ tests/'}
+lint_isort={help='Checking with isort', cmd='echo --isort--; poetry run isort --profile black --check --atomic --py all incolume/ tests/'}
 lint_mypy={help='Checking with mypy', cmd='echo --mypy--; poetry run mypy --check incolume tests'}
 lint_pydocstyle={help='Checking with pydocstyle', cmd='echo --pydocstyle--; poetry run pydocstyle incolume/ tests/'}
 lint_pylint={help='Checking with pylint', cmd='echo --pylint--; poetry run pylint incolume/ tests/'}
-pre_lint="task lint_black && task lint_isort && task lint_flake8 && task lint_pydocstyle && task lint_pylint && task lint_mypy"
-lint={help='Checking all linters configurated', cmd=''}
-prerelease={cmd='v=$(poetry version prerelease) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version prerelease'}
-# pre_patch="poetry run task bandit && poetry run task lint"
+pre_patch="poetry run task bandit && poetry run safety && poetry run task lint"
 patch={cmd='v=$(poetry version patch) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version patch'}
-preminor={cmd='v=$(poetry version preminor) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version preminor'}
 premajor={cmd='v=$(poetry version premajor) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version premajor'}
-clean = {cmd = "echo -n 'Starting cleanning environment..'; find ./ \\( -name '*.pyc' -o -name '*~' -o -name '*.log' -o -name '*.log.*' -o -name '.cache' \\) -delete ; echo ' ok' ",  help = "Shallow clean into environment (.pyc, .cache, .egg, .log, et all)" }
-docs = {help="Generate documentation", cmd="poetry run mkdocs serve"}
+preminor={cmd='v=$(poetry version preminor) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version preminor'}
+prerelease={cmd='v=$(poetry version prerelease) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version prerelease'}
 safety={help='Check safety of packages into project.', cmd='poetry run safety check'}
 
