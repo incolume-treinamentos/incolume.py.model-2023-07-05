@@ -1,5 +1,7 @@
 """Module test."""
 
+import logging
+
 import pytest
 
 
@@ -24,6 +26,5 @@ def test_none(capsys, entrance):
     """Test none."""
     print(entrance)
     out, err = capsys.readouterr()
+    logging.debug('%s, %s', out, err)
     assert out.strip() == entrance
-
-

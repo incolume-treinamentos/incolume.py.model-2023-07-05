@@ -1,7 +1,9 @@
 """Módulo de testes."""
 
 import re
+
 import pytest
+
 from incolume.py.model_2023_07_05 import __version__
 
 
@@ -10,8 +12,7 @@ class TestSemVer:
 
     def test_version(self):
         """Validação de versionamento semântico para versão do pacote."""
-        assert re.fullmatch(r"\d+(\.\d+){2}(-?\w+\.?\d+)?", __version__, re.I)
-
+        assert re.fullmatch(r'\d+(\.\d+){2}(-?\w+\.?\d+)?', __version__, re.I)
 
     @pytest.mark.parametrize(
         ['entrance', 'expected'],

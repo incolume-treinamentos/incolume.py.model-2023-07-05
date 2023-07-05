@@ -1,9 +1,13 @@
 """Module test for principal package."""
-import re
 
 import pytest
 
-from incolume.py.model_2023_07_05 import __version__, configfile, load, versionfile
+from incolume.py.model_2023_07_05 import (
+    __version__,
+    configfile,
+    load,
+    versionfile,
+)
 
 __author__ = '@britodfbr'  # pragma: no cover
 
