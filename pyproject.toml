@@ -312,8 +312,6 @@ envlist =
     flake8
     mypy
     pylint
-    py36
-    py37
     py38
     py39
     py310
@@ -323,6 +321,7 @@ envlist =
 ;basepython = python3
 
 [testenv]
+allowlist_externals = poetry
 whitelist_externals = poetry
 skip_install = true
 commands =
@@ -375,7 +374,7 @@ commands = poetry run task safety
 
 
 [tool.taskipy.tasks]
-bandit={help='', cmd='poetry run bandit -c pyproject.toml -r .'}
+bandit={help='', cmd='poetry run bandit -c pyproject.toml -r incolume/ test/'}
 lint_black={help='Checking with black', cmd='echo --black--; poetry run black --check --diff incolume/ tests/'}
 lint_blue={help='Checking with blue', cmd='echo --blue--; poetry run blue --check --diff incolume/ tests/'}
 lint_flake8={help='Checking with flake8', cmd='echo --flake8--; poetry run flake8 --config pyproject.toml incolume/ tests/'}
