@@ -11,6 +11,35 @@ packages = [{include = "incolume"}]
 python = "^3.10"
 
 
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.4.3"
+mkdocstrings = "^0.22.0"
+mkdocstrings-python = "^1.1.2"
+mkdocs-material = "^9.1.18"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+
+
+[tool.poetry.group.secty.dependencies]
+bandit = {extras = ["toml"], version = "^1.7.5"}
+safety = "^2.3.5"
+
+
+[tool.poetry.group.dev.dependencies]
+blue = "^0.9.1"
+black = "*"
+isort = "^5.12.0"
+mypy = "^1.4.1"
+mypy-extensions = "^1.0.0"
+flake8 = "*"
+pylint = "^2.17.4"
+tox = "*"
+pydocstyle = "^6.3.0"
+taskipy = "^1.11.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
