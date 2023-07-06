@@ -312,8 +312,6 @@ envlist =
     flake8
     mypy
     pylint
-    py38
-    py39
     py310
     py311
 
@@ -348,7 +346,7 @@ commands = poetry run pytest -vv
 
 [testenv:flake8]
 deps = flake8
-commands = poetry run lint_flake8
+commands = poetry run task lint_flake8
 
 [testenv:mypy]
 deps =
