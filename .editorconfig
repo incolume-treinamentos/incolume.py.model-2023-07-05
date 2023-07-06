@@ -17,6 +17,9 @@ indent_size = 2
 
 [*.py]
 max_line_length = 79
+profile = black
+skip = build,.tox,venv
+src_paths=isort,test
 
 [Makefile]
 indent_size = 1

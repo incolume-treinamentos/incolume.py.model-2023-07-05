@@ -13,10 +13,9 @@ classifiers = [
   "Programming Language :: Python",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   'Natural Language :: Portuguese (Brazilian)',
   'Topic :: Software Development :: Libraries :: Python Modules',
   'Topic :: Utilities'
@@ -194,6 +193,7 @@ profile = "black"
 known_first_party = "poetry"
 skip = [".gitignore", ".dockerignore"]
 skip_glob = ["example/*"]
+extend_skip = [".md", ".json"]
 extend_skip_glob = ["my_*_module.py"]
 multi_line_output = 3
 include_trailing_comma = true
@@ -201,7 +201,7 @@ include_trailing_comma = true
 
 [tool.black]
 line-length = 79
-target-version = ['py38', 'py39', 'py310', 'py311']
+target-version = ['py310', 'py311', 'py312']
 include = '\.pyi?$'
 exclude = '''
 # A regex preceded with ^/ will apply only to files and directories
@@ -227,7 +227,7 @@ exclude = '''
  '''
 
 [flake8]
-#max-line-length = 120
+#max-line-length = 79
 
 [tool.pylint.format]
 # Maximum number of characters on a single line.
@@ -296,7 +296,7 @@ disallow_untyped_defs = true
 
 
 [pycodestyle]
-#max_line_length = 120
+#max_line_length = 79
 
 
 [tool.tox]
@@ -382,7 +382,7 @@ lint={help='Checking all linters configurated', cmd=''}
 lint_black={help='Checking with black', cmd='echo --black--; poetry run black --check --diff incolume/ tests/'}
 lint_blue={help='Checking with blue', cmd='echo --blue--; poetry run blue --check --diff incolume/ tests/'}
 lint_flake8={help='Checking with flake8', cmd='echo --flake8--; poetry run flake8 --config pyproject.toml incolume/ tests/'}
-lint_isort={help='Checking with isort', cmd='echo --isort--; poetry run isort --profile black --check --atomic --py all incolume/ tests/'}
+lint_isort={help='Checking with isort', cmd='echo --isort--; poetry run isort --profile black --check --atomic --py all -m 3 incolume/ tests/'}
 lint_mypy={help='Checking with mypy', cmd='echo --mypy--; poetry run mypy --check incolume tests'}
 lint_pydocstyle={help='Checking with pydocstyle', cmd='echo --pydocstyle--; poetry run pydocstyle incolume/ tests/'}
 lint_pylint={help='Checking with pylint', cmd='echo --pylint--; poetry run pylint incolume/ tests/'}
