@@ -306,6 +306,7 @@ minversion = 3.1.0
 isolated_build = True
 envlist =
     clean
+    bandit
     black
     isort
     pydocstyle
@@ -365,6 +366,9 @@ commands = poetry run task lint_pylint
 
 [testenv:black]
 commands = poetry run task lint_black
+
+[testenv:bandit]
+commands = poetry run task bandit
 
 [testenv:safety]
 commands = poetry run task safety
