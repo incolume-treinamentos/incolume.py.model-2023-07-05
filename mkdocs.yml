@@ -1,0 +1,22 @@
+site_name: Incolume Project Model
+repo_url: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05
+repo_name: Incolume Project Model
+edit_uri: tree/dev/docs
+
+theme:
+  name: material
+  language: pt-BR
+  logo: asserts/img/jedi_logo.png
+  favicon: asserts/img/jedi_logo.png
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [incolume]
