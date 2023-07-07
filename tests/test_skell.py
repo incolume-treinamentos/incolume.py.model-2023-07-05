@@ -1,7 +1,5 @@
 """Skell test."""
 
-import re
-
 import pytest
 
 from incolume.py.model_2023_07_05.skell import Skell, skell
@@ -10,7 +8,7 @@ __author__ = '@britodfbr'
 
 
 class TestSkellCase:
-    #@pytest.mark.skip
+    # @pytest.mark.skip
     @pytest.mark.parametrize(
         'entrance expected'.split(),
         (
@@ -38,17 +36,16 @@ class TestSkellCase:
     )
     def test_kwargs(self, entrance, expected):
         """Validação de entrada em kwargs."""
-        skell = Skell(**entrance)
-        assert skell.__dict__ == expected
+        s = Skell(**entrance)
+        assert s.__dict__ == expected
 
-    
     @pytest.mark.parametrize(
         'args kwargs expected'.split(),
         (
             pytest.param(
                 (1, 2, 3),
                 {},
-                {'args': (1,2,3)},
+                {'args': (1, 2, 3)},
             ),
             pytest.param(
                 (),
@@ -63,12 +60,11 @@ class TestSkellCase:
             pytest.param(
                 (1, 2, 3),
                 {'a': '1', 'b': 2, 'c': 3},
-                {'a': '1', 'args': (1,2,3), 'b': 2, 'c': 3},
+                {'a': '1', 'args': (1, 2, 3), 'b': 2, 'c': 3},
             ),
         ),
     )
     def test_all_params(self, args, kwargs, expected):
         """Validação de entrada em kwargs."""
-        skell = Skell(*args, **kwargs)
-        assert skell.__dict__ == expected
-
+        s = Skell(*args, **kwargs)
+        assert s.__dict__ == expected

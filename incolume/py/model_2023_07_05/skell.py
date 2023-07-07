@@ -5,10 +5,10 @@ import typing
 
 
 def skell(
-    *args: typing.Tuple, 
-    **kwargs: typing.Dict
+    *args: typing.Any, **kwargs: typing.Dict
 ) -> typing.Dict[str, typing.Any]:
     """Esqueleto de função.
+
     args:
         args: Argumentos.
         kwargs: Argumentos chaveados.
@@ -25,14 +25,16 @@ def skell(
     """
     result = {'args': args, **kwargs}
     logging.debug(result)
-    logging.info(f'Args: {bool(args)}, kwargs: {bool(kwargs)}')
+    logging.info('Args: {%s}, kwargs: {%s}', bool(args), bool(kwargs))
     return result
 
 
 class Skell:
     """Class for skell."""
+
     def __init__(self, *args: tuple, **kwargs: dict) -> None:
         """Esqueleto de função.
+
         args:
             args: Argumentos.
             kwargs: Argumentos chaveados.
@@ -48,7 +50,7 @@ class Skell:
             >>> skell = Skell(a=1, b=2, c=3)
             >>> skell.__dict__
             {'args': (), 'a': 1, 'b': 2, 'c': 3}
-            
+
             >>> skell = Skell(1, 2, 3, a=1, b=2, c=3)
             >>> skell.__dict__
             {'args': (1, 2, 3), 'a': 1, 'b': 2, 'c': 3}
