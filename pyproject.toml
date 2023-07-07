@@ -307,7 +307,8 @@ isolated_build = True
 envlist =
     clean
     bandit
-    black
+    #black
+    blue
     isort
     pydocstyle
     flake8
@@ -335,7 +336,8 @@ commands =
 
 [testenv:linters]
 commands =
-  {[testenv:black]commands}
+  #{[testenv:black]commands}
+  {[testenv:blue]commands}
   {[testenv:isort]commands}
   {[testenv:flake8]commands}
   {[testenv:pydocstyle]commands}
@@ -366,6 +368,9 @@ commands = poetry run task lint_pylint
 
 [testenv:black]
 commands = poetry run task lint_black
+
+[testenv:blue]
+commands = poetry run task lint_blue
 
 [testenv:bandit]
 commands = poetry run task bandit
