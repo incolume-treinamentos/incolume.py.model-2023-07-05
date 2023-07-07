@@ -1,4 +1,8 @@
-# Welcome to MkDocs
+![Logo da Junta Especializada de Desenvolvimento e Inovação](asserts/img/jedi_logo.png){width=300 .center}
+# Incolume Project Model
+
+
+## Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
