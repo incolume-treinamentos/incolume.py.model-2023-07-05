@@ -1,0 +1,1 @@
+"""Configure switch test."""
