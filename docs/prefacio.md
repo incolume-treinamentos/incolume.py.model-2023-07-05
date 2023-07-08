@@ -57,8 +57,9 @@ Disponível em [docs/CONTRIBUTORS.rst](docs/CONTRIBUTORS.rst).
 - [Versionamento Semântico](https://semver.org/lang/pt-BR/)
 
 
-## Tecnologias aplicadas ##
+## Tecnologias aplicadas
 Deseja aprender mais sobre alguns dos requisitos não funcionais utilizados no projeto?
+
 - [Python - A Linguagem de programação do projeto](http://www.python.org/doc)
 - [RST - Restructuredtext](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#reference-names)
 - [MD - Markdown](https://www.markdownguide.org/basic-syntax/)
