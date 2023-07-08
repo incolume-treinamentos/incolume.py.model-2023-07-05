@@ -5,7 +5,7 @@ import typing
 
 
 def skell(
-    *args: typing.Any, **kwargs: typing.Dict
+    *args: typing.Any, **kwargs: typing.Any
 ) -> typing.Dict[str, typing.Any]:
     """Esqueleto de função.
 
@@ -32,7 +32,7 @@ def skell(
 class Skell:
     """Class for skell."""
 
-    def __init__(self, *args: tuple, **kwargs: dict) -> None:
+    def __init__(self, *args: typing.Any, **kwargs: typing.Any) -> None:
         """Esqueleto de função.
 
         args:
