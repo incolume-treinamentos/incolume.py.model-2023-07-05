@@ -407,6 +407,6 @@ premajor={cmd='v=$(poetry version premajor) && poetry run pytest && git ci -m "$
 preminor={cmd='v=$(poetry version preminor) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version preminor'}
 prerelease={cmd='v=$(poetry version prerelease) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version prerelease'}
 safety={help='Check safety of packages into project.', cmd='poetry run safety check'}
-pre_sec={help='', cmd='poetry run task bandit && poetry run task safety'}
+pre_sec={help='Securance validations', cmd='poetry run task bandit && poetry run task safety'}
 sec={help="Checking environment's safety", cmd=''}
 
