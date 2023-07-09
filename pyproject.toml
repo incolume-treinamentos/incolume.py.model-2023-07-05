@@ -390,7 +390,7 @@ commands = poetry run task safety
 [tool.taskipy.variables]
 path = "path/to/my_module"
 CHANGELOGFILE = "CHANGELOG.md"
-URLCOMPARE = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/"
+URLCOMPARE = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare"
 
 [tool.taskipy.tasks]
 bandit={help='', cmd='poetry run bandit -c pyproject.toml -r incolume/ test/'}
@@ -419,5 +419,5 @@ safety={help='Check safety of packages into project.', cmd='poetry run safety ch
 pre_sec={help='Securance validations', cmd='poetry run task bandit && poetry run task safety'}
 sec={help="Checking environment's safety", cmd=''}
 pre_changelog='poetry run pytest'
-changelog={help='Update changelog file', cmd="poetry run python -c \"from incolumepy.utils.changelog import update_changelog; update_changelog(changelog_file={CHANGELOGFILE}, urlcompare={URLCOMPARE})\" && echo CHANGELOG file updated with success.", user_vars=true}
+changelog={help='Update changelog file', cmd='poetry run python -c "from incolumepy.utils.changelog import update_changelog; update_changelog(changelog_file=\"CHANGELOG.md\", urlcompare=\"https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare\")" && echo CHANGELOG file updated with success.', user_vars=true}
 xpto = { cmd = "echo {path} {CHANGELOGFILE} {URLCOMPARE}", use_vars = true }
