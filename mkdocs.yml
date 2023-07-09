@@ -1,6 +1,6 @@
-site_name: Incolume Project Model
+site_name: Modelo de Projeto Python
 repo_url: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05
-repo_name: Incolume Project Model
+repo_name: incolume.py.model-2023-07-05
 edit_uri: tree/dev/docs
 
 theme:
@@ -9,14 +9,46 @@ theme:
   logo: asserts/img/jedi_logo.png
   favicon: asserts/img/jedi_logo.png
 
+nav:
+    - Home: 'prefacio.md'
+    - 'User Guide':
+      - mkdocs: user_guide/writing-your-docs.md
+      - Installation: user_guide/INSTALLATION.md
+      - Usage: user_guide/usage.md
+      - Contributing: user_guide/development.md
+    - About:
+      - Contributors: about/CONTRIBUTORS.md
+      - License: 'https://raw.githubusercontent.com/incolume-treinamentos/incolume.py.model-2023-07-05/main/LICENSE'
+      - 'Release Notes': CHANGELOG.md
+    - API:
+      - skell module: 'api/skell.md'
+
 markdown_extensions:
   - attr_list
+  - admonition
+  - pymdownx.tasklist
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra_css:
   - stylesheets/extra.css
+
+watch:
+   - incolume
 
 plugins:
 - mkdocstrings:
     handlers:
       python:
         paths: [incolume]
+
+extra:
+  commands:
+    run: incolume
+

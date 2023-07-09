@@ -1,31 +1,16 @@
 # incolume.py.model-2023-07-05
 
 ---
-Este projeto serve como esqueleto para estrutura de outros projetos python.
+Este projeto serve como esqueleto para estrutura de outros projetos python
+homologada pela Junta Especializada de Desenvolvimento e Inovação - JEDI.
 
 
 ## Escopo
-  - Sistema operacional Linux preferencialmente;
-  - git
-  - Python 3.10+
-  - poetry
+Disponível em [docs/prefacio.md#escopo](docs/prefacio.md#escopo)
+
 
 ## Ferramentas aplicadas
-  - blue
-  - coverage
-  - isort
-  - mypy
-  - pydocstyle
-  - bandit
-  - pylint
-  - pytest
-  - safety
-  - mkdocs
-  - taskipy
-  - tox
-
-## Documentação
-docs/site
+Disponível em [docs/prefacio.md#ferramentas-aplicadas](docs/prefacio.md#ferramentas-aplicadas)
 
 
 ## Uso ##
@@ -45,15 +30,8 @@ Disponível em [docs/CONTRIBUTORS.rst](docs/CONTRIBUTORS.rst).
 
 
 ## Convenções adotadas
-  - [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
-  - [GIT Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/)
-  - [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/)
-  - [PEP8](https://pep8.org/)
-  - [Versionamento Semântico](https://semver.org/lang/pt-BR/)
+Disponível em [docs/prefacio.md#convenções-adotadas](docs/prefacio.md#convenções-adotadas).
 
 
-## Tecnologias aplicadas ##
-Deseja aprender mais sobre alguns dos requisitos não funcionais utilizados no projeto?
- - [Python - A Linguagem de programação do projeto](http://www.python.org/doc)
- - [RST - Restructuredtext](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#reference-names)
- - [MD - Markedown](https://www.markdownguide.org/basic-syntax/)
+## Tecnologias aplicadas
+Disponível em [docs/prefacio.md#ferramentas-aplicadas](docs/prefacio.md#ferramentas-aplicadas).
