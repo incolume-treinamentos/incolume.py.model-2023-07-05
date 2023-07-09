@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+poetry run task sec
+echo "More details about it:"
+echo "http://cve.mitre.org; and"
+echo "http://nvd.nist.gov"
