@@ -24,9 +24,7 @@ classifiers = [
 include = [
   'README.md',
   "CHANGELOG.md",
-  'docs/HISTORY.md',
-  'docs/EXAMPLES.md',
-  'docs/CONTRIBUTORS.md',
+  'docs/',
   'pyproject.toml',
 ]
 
@@ -39,11 +37,11 @@ exclude = [
 
 
 [tool.poetry.urls]
-#"Bug Tracker" = "https://gitlab.com/development-incolume/incolume.py.fictus"
-#"Documentation" = "https://gitlab.com/development-incolume/incolume.py.fictus/-/tree/master/docs"
-#"Source" = "https://gitlab.com/development-incolume/incolume.py.fictus"
-#"Git" = "https://gitlab.com/development-incolume/incolume.py.fictus.git"
-#"Tracker" = "https://gitlab.com/development-incolume/incolume.py.fictus/-/issues"
+"Bug Tracker" = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05"
+"Documentation" = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/-/tree/master/docs"
+"Source" = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05"
+"Git" = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05.git"
+"Tracker" = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/-/issues"
 
 
 [tool.poetry.dependencies]
