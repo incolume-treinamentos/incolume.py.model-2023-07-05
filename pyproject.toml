@@ -37,6 +37,9 @@ exclude = [
   "tests/",
 ]
 
+CHANGELOGFILE='CHANGELOG.md'
+URLCOMPARE='https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare'
+
 [tool.poetry.urls]
 #"Bug Tracker" = "https://gitlab.com/development-incolume/incolume.py.fictus"
 #"Documentation" = "https://gitlab.com/development-incolume/incolume.py.fictus/-/tree/master/docs"
@@ -410,4 +413,4 @@ prerelease={cmd='v=$(poetry version prerelease) && poetry run pytest && git ci -
 safety={help='Check safety of packages into project.', cmd='poetry run safety check'}
 pre_sec={help='Securance validations', cmd='poetry run task bandit && poetry run task safety'}
 sec={help="Checking environment's safety", cmd=''}
-
+changelog={help='Update changelog file', cmd='poetry run python -c "from incolumepy.utils import update_changelog; update_changelog($(CHANGELOGFILE), urlcompare=$(URLCOMPARE)) && echo CHANGELOG file updated with success.'}
