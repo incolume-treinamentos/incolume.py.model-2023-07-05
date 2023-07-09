@@ -407,8 +407,9 @@ lint_isort={help='Checking with isort', cmd='echo --isort--; poetry run isort --
 lint_mypy={help='Checking with mypy', cmd='echo --mypy--; poetry run mypy --check incolume tests'}
 lint_pydocstyle={help='Checking with pydocstyle', cmd='echo --pydocstyle--; poetry run pydocstyle incolume/ tests/'}
 lint_pylint={help='Checking with pylint', cmd='echo --pylint--; poetry run pylint incolume/ tests/'}
-pre_patch="poetry run task bandit && poetry run safety && poetry run task lint"
+pre_patch="poetry run task lint"
 patch={cmd='v=$(poetry version patch) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version patch'}
+post_patch="poetry run task bandit && poetry run task safety"
 premajor={cmd='v=$(poetry version premajor) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version premajor'}
 preminor={cmd='v=$(poetry version preminor) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version preminor'}
 prerelease={cmd='v=$(poetry version prerelease) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version prerelease'}
