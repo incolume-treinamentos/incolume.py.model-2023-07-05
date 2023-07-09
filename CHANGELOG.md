@@ -10,6 +10,15 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ---
 
 
+## [1.0.0-rc.2]	 &#8212; 	2023-07-09:
+### added
+  - Automação para changelog
+### changed
+  - Melhoria na descrição dos comandos automatizados
+### fixed
+  - Correção na variáveis de configuração para changelog
+  -  redefinição para captura de valores para changelog
+
 ## [1.0.0-rc.1]	 &#8212; 	2023-07-09:
 ### Added
   - Documentação via mkdocs
@@ -22,3 +31,4 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ---
 
 [1.0.0-rc.1]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.0...1.0.0-rc.1
+[1.0.0-rc.2]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.1...1.0.0-rc.2
