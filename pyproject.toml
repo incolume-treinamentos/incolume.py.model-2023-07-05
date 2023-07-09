@@ -37,6 +37,7 @@ exclude = [
   "tests/",
 ]
 
+
 [tool.poetry.urls]
 #"Bug Tracker" = "https://gitlab.com/development-incolume/incolume.py.fictus"
 #"Documentation" = "https://gitlab.com/development-incolume/incolume.py.fictus/-/tree/master/docs"
@@ -47,6 +48,7 @@ exclude = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
+incolumepy-utils = {git = "https://gitlab.com/development-incolume/incolumepy.utils.git", rev = "master"}
 
 
 [tool.poetry.group.docs.dependencies]
@@ -385,13 +387,19 @@ commands = poetry run task safety
 """
 
 
+[tool.taskipy.variables]
+path = "path/to/my_module"
+CHANGELOGFILE = "CHANGELOG.md"
+URLCOMPARE = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare"
+
 [tool.taskipy.tasks]
 bandit={help='', cmd='poetry run bandit -c pyproject.toml -r incolume/ test/'}
 clean = {cmd = "echo -n 'Starting cleanning environment..'; find ./ \\( -name '*.pyc' -o -name '*~' -o -name '*.log' -o -name '*.log.*' -o -name '.cache' \\) -delete ; echo ' ok' ",  help = "Shallow clean into environment (.pyc, .cache, .egg, .log, et all)" }
 pre_clean-all = {cmd='poetry run task clean', help=''}
 #clean-all = {cmd = "echo -n 'Starting Deep cleanning ..'; find ./ \\( -name '*_cache' -o -name '*cache__' -o -name dist -o -name build -o -name .tox \\) -exec rm -rf {} 2> /dev/null \\; poetry env list|awk '{print $$1}'|while read a; do poetry env remove $${a} 2> /dev/null && echo '$${a} removed.'|| echo '$${a} not removed.'; done ; echo ' Deep cleaning finished!' ",  help = "Deep cleanning into environment (dist, build, htmlcov, .tox, *_cache, et all)" }
 clean-all = {cmd = "echo -n 'Starting Deep cleanning ..'; find ./ \\( -name '*_cache' -o -name '*cache__' -o -name dist -o -name build -o -name .tox -o -name site \\) -exec rm -rf {} 2> /dev/null \\; ; echo ' Deep cleaning finished!' ",  help = "Deep cleanning into environment (dist, build, htmlcov, .tox, *_cache, et all)" }
-docs = {help="Generate documentation", cmd="poetry run mkdocs serve"}
+docs-build = {help="Generate documentation", cmd="poetry run mkdocs build"}
+docs-serve = {help="Run server documentation", cmd="poetry run mkdocs serve"}
 pre_lint="task lint_blue && task lint_isort && task lint_flake8 && task lint_pydocstyle && task lint_pylint && task lint_mypy"
 lint={help='Checking all linters configurated', cmd=''}
 lint_black={help='Checking with black', cmd='echo --black--; poetry run black --check --diff incolume/ tests/'}
@@ -401,12 +409,15 @@ lint_isort={help='Checking with isort', cmd='echo --isort--; poetry run isort --
 lint_mypy={help='Checking with mypy', cmd='echo --mypy--; poetry run mypy --check incolume tests'}
 lint_pydocstyle={help='Checking with pydocstyle', cmd='echo --pydocstyle--; poetry run pydocstyle incolume/ tests/'}
 lint_pylint={help='Checking with pylint', cmd='echo --pylint--; poetry run pylint incolume/ tests/'}
-pre_patch="poetry run task bandit && poetry run safety && poetry run task lint"
-patch={cmd='v=$(poetry version patch) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version patch'}
+pre_patch={help='Run linters tools', cmd="poetry run task lint"}
+patch={cmd='v=$(poetry version patch) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='Generate a patch Sematic Version'}
+post_patch={help='Run securety tools', cmd="poetry run task bandit && poetry run task safety"}
 premajor={cmd='v=$(poetry version premajor) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version premajor'}
 preminor={cmd='v=$(poetry version preminor) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version preminor'}
 prerelease={cmd='v=$(poetry version prerelease) && poetry run pytest && git ci -m "$v" pyproject.toml coverage_report $(find incolume* -name version.txt)', help='poetry version prerelease'}
 safety={help='Check safety of packages into project.', cmd='poetry run safety check'}
 pre_sec={help='Securance validations', cmd='poetry run task bandit && poetry run task safety'}
 sec={help="Checking environment's safety", cmd=''}
-
+pre_changelog='poetry run pytest'
+changelog={help='Update changelog file', cmd='poetry run python -c "from incolumepy.utils.changelog import update_changelog; update_changelog(changelog_file=\"CHANGELOG.md\", urlcompare=\"https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare\")" && echo CHANGELOG file updated with success.', user_vars=true}
+xpto = { cmd = "echo {path} {CHANGELOGFILE} {URLCOMPARE}", use_vars = true }
