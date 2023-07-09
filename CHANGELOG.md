@@ -16,7 +16,9 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 
 ## [1.0.0-rc.0]	 &#8212; 	2023-07-07:
 ### Added
-  - Ferramentas para QA + Securety + linters
+  - Adicionado Ferramentas para QA
+  -  Adicionado ferramenta para Securança de software
+  -  Adicionado ferramentas para validação linters
 ---
 
 [1.0.0-rc.1]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.0...1.0.0-rc.1

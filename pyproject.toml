@@ -24,9 +24,7 @@ classifiers = [
 include = [
   'README.md',
   "CHANGELOG.md",
-  'docs/HISTORY.md',
-  'docs/EXAMPLES.md',
-  'docs/CONTRIBUTORS.md',
+  'docs/',
   'pyproject.toml',
 ]
 
