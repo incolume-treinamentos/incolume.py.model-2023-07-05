@@ -2,6 +2,8 @@
 
 ---
 
+![Logo da Junta Especializada de Desenvolvimento e Inovação](asserts/img/jedi_logo.png){width=300 .center}
+
 ## Objetivos
 
 Desenvolvido com propósito de padrão estrutural de novos pacotes.
@@ -21,7 +23,7 @@ Disponível em [docs/examples/EXAMPLES.rst](examples/EXAMPLES.rst).
 
 
 ## Registro de Mudanças
-Disponível em [CHANGELOG.md](CHANGELOG.md).
+Disponível em [CHANGELOG.md](../CHANGELOG.md).
 
 
 ## Contribuidores
