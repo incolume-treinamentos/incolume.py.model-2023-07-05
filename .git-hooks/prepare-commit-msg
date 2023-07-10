@@ -15,6 +15,6 @@ if ! [[ "$MESSAGE" =~ $COMMITFORMAT ]]; then
   echo "docs: Updated documentation"
   echo "style: Applied Code style"
   echo ""
-  echo "More details on docs/COMMITS.md"
+  echo "More details on docs/user_guide/COMMITS.md"
   exit 1
 fi
