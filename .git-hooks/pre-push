@@ -3,5 +3,5 @@
 poetry run task docs-build
 git add site
 #git config core.hooksPath None
-git commit -m "docs: Updated documentation ($(date +%FT%R))"
+git commit -m "docs: Updated documentation ($(date +%FT%T.%N%z))"
 #git config core.hooksPath .git-hooks/
