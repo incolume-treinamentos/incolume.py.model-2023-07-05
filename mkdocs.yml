@@ -10,7 +10,7 @@ theme:
   favicon: asserts/img/jedi_logo.png
 
 nav:
-    - Home: 'prefacio.md'
+    - Home: 'index.md'
     - 'User Guide':
       - mkdocs: user_guide/writing-your-docs.md
       - Installation: user_guide/INSTALLATION.md
@@ -19,7 +19,7 @@ nav:
     - About:
       - Contributors: about/CONTRIBUTORS.md
       - License: 'https://raw.githubusercontent.com/incolume-treinamentos/incolume.py.model-2023-07-05/main/LICENSE'
-      - 'Release Notes': CHANGELOG.md
+      - 'Release Notes': about/CHANGELOG.md
     - API:
       - skell module: 'api/skell.md'
 

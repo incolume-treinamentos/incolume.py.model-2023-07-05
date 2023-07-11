@@ -15,15 +15,15 @@ também possuí ferramentas para Quality Assurance (QA) tais como black/blue,
 pylint, mypy, pydocstyle, incluindo o pacote security para monitoramento de
 segurança.
 
-## Uso
-Disponível em [docs/usage.rst](usage.md).
+# Prefácio
+[prefacio.md](prefacio.md)
 
-## Exemplos
-Disponível em [docs/examples/EXAMPLES.rst](examples/EXAMPLES.rst).
+## Exemplos e Uso
+Disponível em [docs/api/skell.md](api/skell.md).
 
 
 ## Registro de Mudanças
-Disponível em [CHANGELOG.md](../CHANGELOG.md).
+Disponível em [docs/about/CHANGELOG.md](about/CHANGELOG.md).
 
 
 ## Contribuidores
@@ -33,4 +33,4 @@ Disponível em [docs/about/CONTRIBUTORS.md](about/CONTRIBUTORS.md).
 ## Tecnologias aplicadas
 Deseja aprender mais sobre alguns dos requisitos
 não funcionais utilizados no projeto?
-Consulte a sessão [Padrões Aplicados em Guia de Contribuíção](development.md).
+Consulte a sessão [Padrões Aplicados em Guia de Contribuíção](user_guide/development.md).

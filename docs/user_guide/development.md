@@ -3,13 +3,13 @@
 O desenvolvimento deste projeto segue algumas regras e convenções
 básicas. Como 'estilo de formatação de código',
 
-## Código de conduta ##
-Detalhes em [docs/code_of_conduct.md](extra/code_of_conduct.md).
+## Código de conduta
+Detalhes em [docs/user_guide/code_of_conduct.md](code_of_conduct.md).
 
 ## Padrões aplicados ##
 Este projeto segue as recomendações:
 - [Python - A Linguagem de programação do projeto](http://www.python.org/doc)
-- [Zen do Python - PEP20](extra/zenpy.md)
+- [Zen do Python - PEP20](zenpy.md)
 - [Estilo de codificação Python - PEP8](https://pep8.org/)
 - [RST - Restructuredtext](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
 - [MD - Markedown](https://www.markdownguide.org/basic-syntax/)
@@ -65,7 +65,7 @@ inferência de tipos, digitação gradual, genéricos e tipos de união.
 ```shell
 mypy incolumepy
 ```
-### pydocstyle ###
+### pydocstyle
 O `pydocstyle` é uma ferramenta de análise estática para verificar a
 conformidade com as convenções docstring do Python. Ele suporta a maior
 parte do PEP 257, entretanto não deve ser considerado uma
