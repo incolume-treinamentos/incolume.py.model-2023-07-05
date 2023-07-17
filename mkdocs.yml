@@ -18,11 +18,13 @@ nav:
       - Contributing: user_guide/development.md
     - About:
       - Contributors: about/CONTRIBUTORS.md
-      - License: 'https://raw.githubusercontent.com/incolume-treinamentos/incolume.py.model-2023-07-05/main/LICENSE'
+#      - License: 'https://raw.githubusercontent.com/incolume-treinamentos/incolume.py.model-2023-07-05/main/LICENSE'
+      - License: LICENSE
       - 'Release Notes': about/CHANGELOG.md
-    - API:
-      - skell module: 'api/skell.md'
-
+#    - API:
+#      - skell module: api/skell.md
+#      - other module: api/other.md
+    - API: api
 markdown_extensions:
   - attr_list
   - admonition
