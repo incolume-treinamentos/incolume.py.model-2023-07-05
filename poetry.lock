@@ -275,7 +275,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "incolumepy-utils"
-version = "2.6.0"
+version = "2.7.0a1"
 description = "package incolume python utils"
 category = "main"
 optional = false
@@ -291,7 +291,7 @@ toml = {version = "^0.10.2", extras = ["tomli"]}
 type = "git"
 url = "https://gitlab.com/development-incolume/incolumepy.utils.git"
 reference = "master"
-resolved_reference = "0cd44735de98ea35a2817f1edfc00a58d2f8fef5"
+resolved_reference = "bca9b871ae49147bf40b5aaab5f5d1c477b6c7f6"
 
 [[package]]
 name = "iniconfig"
