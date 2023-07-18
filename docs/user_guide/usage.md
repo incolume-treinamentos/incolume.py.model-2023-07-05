@@ -57,10 +57,10 @@ Contains:
     [tool.poetry]
       ...
     packages=[
-        {include = 'incolumepy/gwa', from=''},
+        {include = 'incolume/', from=''},
     ]
     ```
-   3. Define Python version (3.6.8+):
+   3. Define Python version (3.10+):
        ```bash
       Change..
       [tool.poetry.dependencies]
@@ -68,7 +68,7 @@ Contains:
 
       To ..
       [tool.poetry.dependencies]
-      python = ">=3.6.8,<4"
+      python = ~3.10
        ```
    4. Commit changes
 6. Configure unit tests with pytest:

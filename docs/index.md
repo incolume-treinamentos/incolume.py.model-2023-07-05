@@ -19,7 +19,7 @@ segurança.
 [prefacio.md](prefacio.md)
 
 ## Exemplos e Uso
-Disponível em [docs/api/skell.md](api/skell.md).
+Disponível em [docs/api](api/index.md).
 
 
 ## Registro de Mudanças
