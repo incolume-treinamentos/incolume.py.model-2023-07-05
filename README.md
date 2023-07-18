@@ -13,25 +13,22 @@ Disponível em [docs/prefacio.md#escopo](docs/prefacio.md#escopo)
 Disponível em [docs/prefacio.md#ferramentas-aplicadas](docs/prefacio.md#ferramentas-aplicadas)
 
 
-## Uso ##
-Disponível em [docs/usage.rst](docs/usage.md).
-Outras curiosidades sobre este projeto podem ser acompanhadas em [docs/HISTORY.rst](docs/HISTORY.rst).
-
-## Exemplos ##
-Disponível em [docs/examples/EXAMPLES.rst](docs/examples/EXAMPLES.rst).
+## Exemplos e Uso
+Exemplos e outras curiosidades sobre este projeto podem
+ser visualizadas em [docs/api](docs/api/index.md).
 
 
 ## Registro de Mudanças ##
-Disponível em [docs/CHANGESLOG.md](docs/CHANGESLOG.md).
+Disponível em [docs/about/CHANGELOG.md](docs/about/CHANGELOG.md).
 
 
 ## Contribuidores ##
-Disponível em [docs/CONTRIBUTORS.rst](docs/CONTRIBUTORS.rst).
+Disponível em [docs/about/CONTRIBUTORS.md](docs/about/CONTRIBUTORS.md).
 
 
 ## Convenções adotadas
 Disponível em [docs/prefacio.md#convenções-adotadas](docs/prefacio.md#convenções-adotadas).
 
 
-## Tecnologias aplicadas
-Disponível em [docs/prefacio.md#ferramentas-aplicadas](docs/prefacio.md#ferramentas-aplicadas).
+## Tecnologias adotadas
+Disponível em [docs/prefacio.md#tecnologias-adotadas](docs/prefacio.md#tecnologias-adotadas).

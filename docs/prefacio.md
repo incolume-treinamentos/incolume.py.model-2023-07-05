@@ -34,7 +34,7 @@ Estrutura base genérica para iniciar um projeto Python.
 - tox
 
 ## Exemplos e Uso
-Disponível em [docs/examples/EXAMPLES.rst](user_guide/EXAMPLES.md).
+Disponível em [docs/api](api/index.md).
 
 
 ## Registro de Mudanças ##
@@ -52,7 +52,7 @@ Disponível em [docs/about/CONTRIBUTORS.md](about/CONTRIBUTORS.md).
 - [Versionamento Semântico](https://semver.org/lang/pt-BR/)
 
 
-## Tecnologias aplicadas
+## Tecnologias adotadas
 Deseja aprender mais sobre alguns dos requisitos não funcionais utilizados no projeto?
 
 - [Python - A Linguagem de programação do projeto](http://www.python.org/doc)

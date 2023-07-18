@@ -12,19 +12,18 @@ theme:
 nav:
     - Home: 'index.md'
     - 'User Guide':
-      - mkdocs: user_guide/writing-your-docs.md
-      - Installation: user_guide/INSTALLATION.md
-      - Usage: user_guide/usage.md
+      - Base: prefacio.md
       - Contributing: user_guide/development.md
+      - Código de Conduta: user_guide/code_of_conduct.md
+      - Installation: user_guide/INSTALLATION.md
+      - mkdocs: user_guide/writing-your-docs.md
+      - Usage: user_guide/usage.md
+      - Zen Python: user_guide/zenpy.md
     - About:
       - Contributors: about/CONTRIBUTORS.md
-#      - License: 'https://raw.githubusercontent.com/incolume-treinamentos/incolume.py.model-2023-07-05/main/LICENSE'
-      - License: LICENSE
+      - License: 'https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/blob/main/LICENSE'
       - 'Release Notes': about/CHANGELOG.md
-#    - API:
-#      - skell module: api/skell.md
-#      - other module: api/other.md
-    - API: api
+    - API: api/index.md
 markdown_extensions:
   - attr_list
   - admonition
