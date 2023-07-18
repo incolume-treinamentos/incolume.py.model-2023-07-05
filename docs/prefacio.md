@@ -33,31 +33,26 @@ Estrutura base genérica para iniciar um projeto Python.
 - taskipy
 - tox
 
-## Uso ##
-Disponível em [docs/usage.rst](docs/usage.md).
-Outras curiosidades sobre este projeto podem ser acompanhadas em [docs/HISTORY.rst](docs/HISTORY.rst).
-
-## Exemplos ##
-Disponível em [docs/examples/EXAMPLES.rst](docs/examples/EXAMPLES.rst).
+## Exemplos e Uso
+Disponível em [docs/api](api/index.md).
 
 
 ## Registro de Mudanças ##
-Disponível em [docs/CHANGESLOG.md](docs/CHANGESLOG.md).
+Disponível em [docs/about/CHANGELOG.md](about/CHANGELOG.md).
 
 
 ## Contribuidores ##
-Disponível em [docs/CONTRIBUTORS.rst](docs/CONTRIBUTORS.rst).
+Disponível em [docs/about/CONTRIBUTORS.md](about/CONTRIBUTORS.md).
 
 
 ## Convenções adotadas
-- [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - [GIT Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/)
 - [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/)
 - [PEP 8 - Estilo de codificação Python](https://pep8.org/)
 - [Versionamento Semântico](https://semver.org/lang/pt-BR/)
 
 
-## Tecnologias aplicadas
+## Tecnologias adotadas
 Deseja aprender mais sobre alguns dos requisitos não funcionais utilizados no projeto?
 
 - [Python - A Linguagem de programação do projeto](http://www.python.org/doc)
