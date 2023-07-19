@@ -9,22 +9,16 @@ Detalhes em [docs/user_guide/code_of_conduct.md](code_of_conduct.md).
 
 ## Padrões aplicados
 
-Este projeto segue as recomendações:
+Este projeto segue as recomendações descritas em
+[Tecnologias Adotadas](../prefacio.md#tecnologias-adotadas) e
+[Convenções Adotadas](../prefacio.md#convenções-adotadas).
 
-- [Python - A Linguagem de programação do projeto](http://www.python.org/doc)
-- [Zen do Python - PEP20](zenpy.md)
-- [Estilo de codificação Python - PEP8](https://pep8.org/)
-- [RST - Restructuredtext](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
-- [MD - Markedown](https://www.markdownguide.org/basic-syntax/)
-- [Versionamento Semântico (SemVer)](https://semver.org/lang/pt-BR/)
-- [GIT Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/)
-- [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## Prerequisitos
 
-- Sistema Operacional (Linux preferencialmente)
+- Sistema Operacional Linux Like ou WSL
 - git client
-- python 3.8+
+- python 3.10+
 - pyenv
 - pip or poetry (preferencialmente)
 
@@ -35,11 +29,10 @@ também denominadas linters.
 
 Há uso das seguintes:
 
-- black
+- black / blue
 - isort
 - mypy
 - pydocstyle
-- pylame
 - pylint
 
 ## Segurança
@@ -110,8 +103,8 @@ safety check
 ```
 
 ## Ferramentas de Automação
-Para facilitar o trabalho, várias das tarefas estão automatizadas pelo
-githooks, e/ou Makefile, e/ou tox.
+Para facilitar o trabalho, várias das tarefas estão
+automatizadas pelo githooks, e/ou Makefile, e/ou tox e/ou taskipy.
 
 ### Tox
 
@@ -119,15 +112,11 @@ githooks, e/ou Makefile, e/ou tox.
 
 Na Verificação básica engloba:
 - black
+- blue
 - isort
 - pydocstyle
-- pylama
 - mypy
 - pylint
-- py36
-- py37
-- py38
-- py39
 - py310
 - py311
 
@@ -136,7 +125,7 @@ tox
 ```
 #### Verificação dos testes com as versões python disponíveis ####
 ```shell
-tox -e py36,py37,py38,py39,py310,py311
+tox -e py310,py311
 ```
 #### Verificação de três linters apenas no em um módulo ####
 ```shell
@@ -164,12 +153,14 @@ Executa todas as verificações diponíveis contidas no `tox`.
 tox -e ALL
 ```
 
-### Makefile ###
+### Makefile
+
 O `Makefile` foi personalizado para rodar com as opções necessárias.
 Com o help você verá todas as opções.
 ```shell
 make help
 ```
+
 #### Iniciar ambiente dev ####
 Através do `Makefile`, pode-se criar um ambiente virtual para o projeto,
 conforme a versão python predefinida, instalando todas as dependências
@@ -200,4 +191,89 @@ make docsgen
 #### Verificação de segurança e exposição de motivos
 ```shell
 make safety
+```
+
+
+### Taskipy
+Com `taskipy` as tarefas são definidas em um arquivo
+e pode-se executá-las com comandos simples.
+
+```shell
+task bandit
+```
+
+```shell
+task clean
+```
+
+```shell
+task clean-all
+```
+
+```shell
+task docs-build
+```
+
+```shell
+task docs-serve
+```
+
+```shell
+task lint
+```
+
+```shell
+task lint_black
+```
+
+```shell
+task lint_blue
+```
+
+```shell
+task lint_flake8
+```
+
+```shell
+task lint_isort
+```
+
+```shell
+task lint_mypy
+```
+
+```shell
+task lint_pydocstyle
+```
+
+```shell
+task lint_pylint
+```
+
+```shell
+task patch
+```
+
+```shell
+task premajor
+```
+
+```shell
+task preminor
+```
+
+```shell
+task prerelease
+```
+
+```shell
+task safety
+```
+
+```shell
+task sec
+```
+
+```shell
+task changelog
 ```
