@@ -50,6 +50,7 @@ Disponível em [docs/about/CONTRIBUTORS.md](about/CONTRIBUTORS.md).
 - [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/)
 - [PEP 8 - Estilo de codificação Python](https://pep8.org/)
 - [Versionamento Semântico](https://semver.org/lang/pt-BR/)
+- [Zen do Python - PEP20](user_guide/zenpy.md)
 
 
 ## Tecnologias adotadas
