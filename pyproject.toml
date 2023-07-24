@@ -38,7 +38,7 @@ exclude = [
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05"
-"Documentation" = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/-/tree/master/docs"
+"Documentation" = "https://incolume-treinamentos.github.io/incolume.py.model-2023-07-05/"
 "Source" = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05"
 "Git" = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05.git"
 "Tracker" = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/-/issues"
