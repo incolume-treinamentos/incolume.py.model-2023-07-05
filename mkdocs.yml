@@ -21,7 +21,7 @@ nav:
       - Zen Python: user_guide/zenpy.md
     - About:
       - Contributors: about/CONTRIBUTORS.md
-      - License: 'https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/blob/main/LICENSE'
+      - License: about/LICENSE
       - 'Release Notes': about/CHANGELOG.md
     - API: api/index.md
 markdown_extensions:
