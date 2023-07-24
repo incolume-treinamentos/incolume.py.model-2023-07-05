@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-poetry run task sec
+poetry run task docs-build
 echo "More details about it:"
 echo "http://cve.mitre.org; and"
 echo "http://nvd.nist.gov"
