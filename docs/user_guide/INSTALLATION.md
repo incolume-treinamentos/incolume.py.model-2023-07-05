@@ -25,7 +25,7 @@ Specific version from git repo:
 ```shell
   poetry add git+https://gitlab.com/development-incolume/incolume.py.model-2023-07-05.git@"1.0.0"
 ```
-Specific branche from git repo:
+Specific branch from git repo:
 ```shell
   poetry add git+https://gitlab.com/development-incolume/incolume.py.model-2023-07-05.git@"enhacement/epoch#16800000"
 ```

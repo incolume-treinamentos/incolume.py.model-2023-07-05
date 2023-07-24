@@ -10,8 +10,8 @@ Detalhes em [docs/user_guide/code_of_conduct.md](code_of_conduct.md).
 ## Padrões aplicados
 
 Este projeto segue as recomendações descritas em
-[Tecnologias Adotadas](../prefacio.md#tecnologias-adotadas) e
-[Convenções Adotadas](../prefacio.md#convenções-adotadas).
+[Tecnologias](../prefacio.md#tecnologias-adotadas) e
+[Convenções](../prefacio.md#convenções-adotadas) Adotadas.
 
 
 ## Prerequisitos
@@ -37,8 +37,8 @@ Há uso das seguintes:
 
 ## Segurança
 
-Também há preocupação com a segurança do código implementado, o pacote
-`safety` é utilizado para o monitoramento de pacotes.
+Também há preocupação com a segurança do código implementado, os pacotes
+`bandit` e `safety` são utilizados para monitoramento de segurança das dependências.
 
 ### bandit
 Bandit é uma ferramenta projetada para encontrar problemas de segurança comuns no código Python. Para fazer isso, o Bandit processa cada arquivo, cria um AST a partir dele e executa os plug-ins apropriados nos nodos do AST.
@@ -161,7 +161,7 @@ Com o help você verá todas as opções.
 make help
 ```
 
-#### Iniciar ambiente dev ####
+#### Iniciar ambiente dev
 Através do `Makefile`, pode-se criar um ambiente virtual para o projeto,
 conforme a versão python predefinida, instalando todas as dependências
 necessárias, além de ativar as configurações em passos simples.
