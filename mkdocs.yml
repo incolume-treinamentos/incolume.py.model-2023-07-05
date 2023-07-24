@@ -16,9 +16,11 @@ nav:
       - Contributing: user_guide/development.md
       - Código de Conduta: user_guide/code_of_conduct.md
       - Installation: user_guide/INSTALLATION.md
-      - mkdocs: user_guide/writing-your-docs.md
       - Usage: user_guide/usage.md
-      - Zen Python: user_guide/zenpy.md
+      - Medotologias:
+        - Conventional Commit: user_guide/COVENTIONAL_COMMITS.md
+        - mkdocs: user_guide/writing-your-docs.md
+        - Zen Python: user_guide/zenpy.md
     - About:
       - Contributors: about/CONTRIBUTORS.md
       - License: about/LICENSE.md

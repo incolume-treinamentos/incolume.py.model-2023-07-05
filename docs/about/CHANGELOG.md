@@ -13,16 +13,27 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ## [Unreleased]	 &#8212; 	2023-07-23:
 ### Added
   - Documentação via mkdocs;
+  - Adicionado para novos recursos.;
   - Adicionado Ferramentas para QA;
   - Adicionado ferramentas para validação linters;
   - Automação para changelog;
-### Changed
-  - Melhoria na descrição dos comandos automatizados;
-  - Documentação atualizada;
 ### Fixed
+  - Corrigido para qualquer correção de bug.;
   - Correção na variáveis de configuração para changelog;
   - Redefinição para captura de valores para changelog;
+### Changed
+  - Modificado para alterações em recursos existentes.;
+  - Melhoria na descrição dos comandos automatizados;
+  - Atualizado o link de referencia da licensa de software, com referência a documentação do projeto;
+  - Documentação atualizada;
+### Deprecated
+  - Obsoleto para recursos que serão removidos nas próximas versões.;
+  - Remover configuração para setup de ambiente virtual;
+### Removed
+  - Removido para recursos removidos nesta versão.;
+  - Removido link na documentação apontando para estrutura git de desenvolvimento;
 ### Security
+  - Segurança em caso de vulnerabilidades.;
   - Adicionado ferramenta para Securança de software;
 
 ## [1.0.0-rc.3]	 &#8212; 	2023-07-17:
