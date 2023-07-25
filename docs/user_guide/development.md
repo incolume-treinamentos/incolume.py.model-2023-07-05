@@ -22,6 +22,19 @@ Este projeto segue as recomendações descritas em
 - pyenv
 - pip or poetry (preferencialmente)
 
+
+## Iniciando ambiente de desenvolvimento
+
+Para definir a versão do Python para o ambiente,
+e instalar as dependências execute os comandos abaixo:
+
+    $ poetry env use 3.10
+    $ poetry install
+
+Estes comandos criarão um ambiente virtual em Python, na versão especificada,
+e instalará todas as dependências fixadas em `pyproject.toml` com suas
+restrições especificadas em `poetry.lock`.
+
 ## Qualidade de Código
 
 É utilizado de ferramentas validadoras de qualidade de código estático,
@@ -156,7 +169,7 @@ tox -e ALL
 ### Makefile
 
 O `Makefile` foi personalizado para rodar com as opções necessárias.
-Com o help você verá todas as opções.
+Com o help você verá todas as opções. Este comando é exclusivo para linux like.
 ```shell
 make help
 ```
@@ -195,85 +208,32 @@ make safety
 
 
 ### Taskipy
-Com `taskipy` as tarefas são definidas em um arquivo
-e pode-se executá-las com comandos simples.
+Com `taskipy` as tarefas são definidas puramente com Python em um arquivo
+e pode-se executar rotinas complexas com comandos simples.
 
 ```shell
-task bandit
-```
+$ poetry run task -l
 
-```shell
-task clean
-```
-
-```shell
-task clean-all
-```
-
-```shell
-task docs-build
-```
-
-```shell
-task docs-serve
-```
-
-```shell
-task lint
-```
-
-```shell
-task lint_black
-```
-
-```shell
-task lint_blue
-```
-
-```shell
-task lint_flake8
-```
-
-```shell
-task lint_isort
-```
-
-```shell
-task lint_mypy
-```
-
-```shell
-task lint_pydocstyle
-```
-
-```shell
-task lint_pylint
-```
-
-```shell
-task patch
-```
-
-```shell
-task premajor
-```
-
-```shell
-task preminor
-```
-
-```shell
-task prerelease
-```
-
-```shell
-task safety
-```
-
-```shell
-task sec
-```
-
-```shell
-task changelog
+bandit          poetry run bandit -c pyproject.toml -r incolume/ test/
+check-all       Checking all
+clean           Shallow clean into environment (.pyc, .cache, .egg, .log, et all)
+clean-all       Deep cleanning into environment (dist, build, htmlcov, .tox, *_cache, et all)
+docs-build      Generate documentation
+docs-serve      Run server documentation
+lint            Checking all linters configurated
+lint_black      Checking with black
+lint_blue       Checking with blue
+lint_flake8     Checking with flake8
+lint_isort      Checking with isort
+lint_mypy       Checking with mypy
+lint_pydocstyle Checking with pydocstyle
+lint_pylint     Checking with pylint
+patch           Generate a patch Sematic Version
+premajor        poetry version premajor
+preminor        poetry version preminor
+prerelease      poetry version prerelease
+safety          Check safety of packages into project.
+sec             Checking environment's safety
+changelog       Update changelog file
+setup           Configure environment develop
 ```
