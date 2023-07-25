@@ -392,9 +392,11 @@ URLCOMPARE = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07
 
 [tool.taskipy.tasks]
 bandit={help='', cmd='poetry run bandit -c pyproject.toml -r incolume/ test/'}
+pre_check-all = {cmd='echo Starting Check all ..', help=''}
+check-all = {cmd='poetry run task clean-all; poetry run task lint; poetry run task sec',  help = "Checking all" }
+post_check-all = {cmd='echo Checking finished!', help=''}
 clean = {cmd = "echo -n 'Starting cleanning environment..'; find ./ \\( -name '*.pyc' -o -name '*~' -o -name '*.log' -o -name '*.log.*' -o -name '.cache' \\) -delete ; echo ' ok' ",  help = "Shallow clean into environment (.pyc, .cache, .egg, .log, et all)" }
 pre_clean-all = {cmd='poetry run task clean', help=''}
-#clean-all = {cmd = "echo -n 'Starting Deep cleanning ..'; find ./ \\( -name '*_cache' -o -name '*cache__' -o -name dist -o -name build -o -name .tox \\) -exec rm -rf {} 2> /dev/null \\; poetry env list|awk '{print $$1}'|while read a; do poetry env remove $${a} 2> /dev/null && echo '$${a} removed.'|| echo '$${a} not removed.'; done ; echo ' Deep cleaning finished!' ",  help = "Deep cleanning into environment (dist, build, htmlcov, .tox, *_cache, et all)" }
 clean-all = {cmd = "echo -n 'Starting Deep cleanning ..'; find ./ \\( -name '*_cache' -o -name '*cache__' -o -name dist -o -name build -o -name .tox -o -name site \\) -exec rm -rf {} 2> /dev/null \\; ; echo ' Deep cleaning finished!' ",  help = "Deep cleanning into environment (dist, build, htmlcov, .tox, *_cache, et all)" }
 pre_docs-build={help='Pre docs-build', cmd="poetry run task changelog"}
 docs-build = {help="Generate documentation", cmd="poetry run mkdocs gh-deploy --config-file mkdocs.yml --remote-branch webdoc"}
@@ -420,5 +422,4 @@ sec={help="Checking environment's safety", cmd=''}
 pre_changelog='poetry run pytest'
 changelog={help='Update changelog file', cmd='poetry run gcl docs/about/CHANGELOG.md -u https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare && echo CHANGELOG file updated with success.', user_vars=true}
 xpto = { cmd = "echo {path} {CHANGELOGFILE} {URLCOMPARE}", use_vars = true }
-# TODO remover configuração para setup de ambiente virtual
-setup = { help = 'Configure environment develop', cmd='git config core.hooksPath .git-hooks/; poetry env use 3.10; poetry install'}
+setup = { help = 'Configure environment develop', cmd='git config core.hooksPath .git-hooks/'}
