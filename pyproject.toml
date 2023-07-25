@@ -422,5 +422,4 @@ sec={help="Checking environment's safety", cmd=''}
 pre_changelog='poetry run pytest'
 changelog={help='Update changelog file', cmd='poetry run gcl docs/about/CHANGELOG.md -u https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare && echo CHANGELOG file updated with success.', user_vars=true}
 xpto = { cmd = "echo {path} {CHANGELOGFILE} {URLCOMPARE}", use_vars = true }
-# TODO remover configuração para setup de ambiente virtual
-setup = { help = 'Configure environment develop', cmd='git config core.hooksPath .git-hooks/; poetry env use 3.10; poetry install'}
+setup = { help = 'Configure environment develop', cmd='git config core.hooksPath .git-hooks/'}
