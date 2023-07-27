@@ -46,7 +46,7 @@ exclude = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-incolumepy-utils = {git = "https://gitlab.com/development-incolume/incolumepy.utils.git", rev = "master"}
+incolumepy-utils = {git = "https://github.com/development-incolume/incolumepy.utils.git", rev = "master"}
 
 
 [tool.poetry.group.docs.dependencies]
