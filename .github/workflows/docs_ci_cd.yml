@@ -47,5 +47,5 @@ jobs:
 
       - name: Generate a documentation
         run: |
-          git pull origin webdoc
+          git pull origin
           poetry run mkdocs gh-deploy --config-file mkdocs.yml --remote-branch webdoc
