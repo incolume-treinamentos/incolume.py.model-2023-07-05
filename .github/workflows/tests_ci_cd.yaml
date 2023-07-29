@@ -27,9 +27,9 @@ jobs:
         python -m pip install --upgrade poetry
         poetry install
 
-    - name: Test with tox
-      run: poetry run tox
+    - name: Test with task's automation
+      run: poetry run task check-all
 
     - name: Generate coverage report
       run: |
-        poetry run pytest -v --cov=./incolumepy --cov-report=xml
+        poetry run pytest
