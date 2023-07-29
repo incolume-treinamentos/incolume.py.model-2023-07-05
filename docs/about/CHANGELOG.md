@@ -36,6 +36,10 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
   - Segurança em caso de vulnerabilidades.;
   - Adicionado ferramenta para Securança de software;
 
+## [1.0.0-rc.8]	 &#8212; 	2023-07-29:
+### Changed
+  - Correção para Gerador de documentação automatica gha + mkdocs;
+
 ## [1.0.0-rc.7]	 &#8212; 	2023-07-29:
 ### Changed
   - Correção para Gerador de documentação automatica gha + mkdocs;
@@ -104,18 +108,13 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ### Added
   - Documentação via mkdocs;
 
-## [1.0.0-rc.0]	 &#8212; 	2023-07-07:
+## 1.0.0-rc.0	 &#8212; 	2023-07-07:
 ### Added
   - Adicionado Ferramentas para QA;
   - Adicionado ferramenta para Securança de software;
   - Adicionado ferramentas para validação linters;
-
-## 0.11.0a4	 &#8212; 	2023-07-29:
-### Changed
-  - Correção para Gerador de documentação automatica gha + mkdocs;
 ---
 
-[1.0.0-rc.0]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/0.11.0a4...1.0.0-rc.0
 [1.0.0-rc.1]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.0...1.0.0-rc.1
 [1.0.0-rc.2]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.1...1.0.0-rc.2
 [1.0.0-rc.3]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.2...1.0.0-rc.3
@@ -123,4 +122,5 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 [1.0.0-rc.5]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.4...1.0.0-rc.5
 [1.0.0-rc.6]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.5...1.0.0-rc.6
 [1.0.0-rc.7]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.6...1.0.0-rc.7
-[Unreleased]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.7...Unreleased
+[1.0.0-rc.8]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.7...1.0.0-rc.8
+[Unreleased]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.8...Unreleased
