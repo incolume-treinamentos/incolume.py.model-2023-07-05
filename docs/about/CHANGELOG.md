@@ -5,10 +5,36 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and [Conventional Commit](https://www.conventionalcommits.org/pt-br/v1.0.0/).
 
-This file was automatically generated for [incolumepy.utils](https://gitlab.com/development-incolume/incolumepy.utils/-/tree/2.7.0a1)
+This file was automatically generated for [incolumepy.utils](https://gitlab.com/development-incolume/incolumepy.utils/-/tree/2.8.0)
 
 ---
 
+
+## [Unreleased]	 &#8212; 	2023-07-23:
+### Added
+  - Documentação via mkdocs;
+  - Adicionado para novos recursos.;
+  - Adicionado Ferramentas para QA;
+  - Adicionado ferramentas para validação linters;
+  - Automação para changelog;
+### Fixed
+  - Corrigido para qualquer correção de bug.;
+  - Correção na variáveis de configuração para changelog;
+  - Redefinição para captura de valores para changelog;
+### Changed
+  - Modificado para alterações em recursos existentes.;
+  - Melhoria na descrição dos comandos automatizados;
+  - Atualizado o link de referencia da licensa de software, com referência a documentação do projeto;
+  - Documentação atualizada;
+### Deprecated
+  - Obsoleto para recursos que serão removidos nas próximas versões.;
+  - Remover configuração para setup de ambiente virtual;
+### Removed
+  - Removido para recursos removidos nesta versão.;
+  - Removido link na documentação apontando para estrutura git de desenvolvimento;
+### Security
+  - Segurança em caso de vulnerabilidades.;
+  - Adicionado ferramenta para Securança de software;
 
 ## [1.0.0-rc.3]	 &#8212; 	2023-07-17:
 ### Changed
@@ -27,7 +53,7 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ### Added
   - Documentação via mkdocs;
 
-## [1.0.0-rc.0]	 &#8212; 	2023-07-07:
+## 1.0.0-rc.0	 &#8212; 	2023-07-07:
 ### Added
   - Adicionado Ferramentas para QA;
   - Adicionado ferramenta para Securança de software;
@@ -37,3 +63,4 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 [1.0.0-rc.1]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.0...1.0.0-rc.1
 [1.0.0-rc.2]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.1...1.0.0-rc.2
 [1.0.0-rc.3]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.2...1.0.0-rc.3
+[Unreleased]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.3...Unreleased

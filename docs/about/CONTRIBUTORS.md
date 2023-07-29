@@ -14,25 +14,25 @@
   <tr>
   <td>
     <figure class="card">
-      <a href="https://github.com/britodfbr">
+      <a href="https://github.com/incolume-jedi">
         <img src="../asserts/img/img_avatar.png" width="100px" alt="Avatar githubuser">
-        <figcaption class="container">Ricardo Brito</figcaption>
+        <figcaption class="container">Jedi Member</figcaption>
       </a>
     </figure>
   </td>
   <td>
     <figure class="card">
-      <a href="https://github.com/britodfbr">
+      <a href="https://github.com/incolume-jedi">
         <img src="../asserts/img/img_avatar.png" width="100px" alt="Avatar githubuser">
-        <figcaption class="container">Ricardo Brito</figcaption>
+        <figcaption class="container">Jedi Member</figcaption>
       </a>
     </figure>
   </td>
   <td>
     <figure class="card">
-      <a href="https://github.com/britodfbr">
+      <a href="https://github.com/incolume-jedi">
         <img src="../asserts/img/img_avatar.png" width="100px" alt="Avatar githubuser">
-        <figcaption class="container">Ricardo Brito</figcaption>
+        <figcaption class="container">Jedi Member</figcaption>
       </a>
     </figure>
   </td>
@@ -40,27 +40,29 @@
   <tr>
   <td>
     <figure class="card">
-      <a href="https://github.com/britodfbr">
+      <a href="https://github.com/incolume-jedi">
         <img src="../asserts/img/img_avatar.png" width="100px" alt="Avatar githubuser">
-        <figcaption class="container">Ricardo Brito</figcaption>
+        <figcaption class="container">Jedi Member</figcaption>
       </a>
     </figure>
   </td>
   <td>
     <figure class="card">
-      <a href="https://github.com/britodfbr">
+      <a href="https://github.com/incolume-jedi">
         <img src="../asserts/img/img_avatar.png" width="100px" alt="Avatar githubuser">
-        <figcaption class="container">Ricardo Brito</figcaption>
+        <figcaption class="container">Jedi Member</figcaption>
       </a>
     </figure>
   </td>
   <td>
     <figure class="card">
-      <a href="https://github.com/britodfbr">
+      <a href="https://github.com/incolume-jedi">
         <img src="../asserts/img/img_avatar.png" width="100px" alt="Avatar githubuser">
-        <figcaption class="container">Ricardo Brito</figcaption>
+        <figcaption class="container">Jedi Member</figcaption>
       </a>
     </figure>
   </td>
   </tr>
 </table>
+
+[Todos os contribuidores](https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/activity)

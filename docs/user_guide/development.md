@@ -9,24 +9,31 @@ Detalhes em [docs/user_guide/code_of_conduct.md](code_of_conduct.md).
 
 ## Padrões aplicados
 
-Este projeto segue as recomendações:
+Este projeto segue as recomendações descritas em
+[Tecnologias](../prefacio.md#tecnologias-adotadas) e
+[Convenções](../prefacio.md#convenções-adotadas) Adotadas.
 
-- [Python - A Linguagem de programação do projeto](http://www.python.org/doc)
-- [Zen do Python - PEP20](zenpy.md)
-- [Estilo de codificação Python - PEP8](https://pep8.org/)
-- [RST - Restructuredtext](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
-- [MD - Markedown](https://www.markdownguide.org/basic-syntax/)
-- [Versionamento Semântico (SemVer)](https://semver.org/lang/pt-BR/)
-- [GIT Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/)
-- [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## Prerequisitos
 
-- Sistema Operacional (Linux preferencialmente)
+- Sistema Operacional Linux Like ou WSL
 - git client
-- python 3.8+
+- python 3.10+
 - pyenv
 - pip or poetry (preferencialmente)
+
+
+## Iniciando ambiente de desenvolvimento
+
+Para definir a versão do Python para o ambiente,
+e instalar as dependências execute os comandos abaixo:
+
+    $ poetry env use 3.10
+    $ poetry install
+
+Estes comandos criarão um ambiente virtual em Python, na versão especificada,
+e instalará todas as dependências fixadas em `pyproject.toml` com suas
+restrições especificadas em `poetry.lock`.
 
 ## Qualidade de Código
 
@@ -35,17 +42,16 @@ também denominadas linters.
 
 Há uso das seguintes:
 
-- black
+- black / blue
 - isort
 - mypy
 - pydocstyle
-- pylame
 - pylint
 
 ## Segurança
 
-Também há preocupação com a segurança do código implementado, o pacote
-`safety` é utilizado para o monitoramento de pacotes.
+Também há preocupação com a segurança do código implementado, os pacotes
+`bandit` e `safety` são utilizados para monitoramento de segurança das dependências.
 
 ### bandit
 Bandit é uma ferramenta projetada para encontrar problemas de segurança comuns no código Python. Para fazer isso, o Bandit processa cada arquivo, cria um AST a partir dele e executa os plug-ins apropriados nos nodos do AST.
@@ -110,8 +116,8 @@ safety check
 ```
 
 ## Ferramentas de Automação
-Para facilitar o trabalho, várias das tarefas estão automatizadas pelo
-githooks, e/ou Makefile, e/ou tox.
+Para facilitar o trabalho, várias das tarefas estão
+automatizadas pelo githooks, e/ou Makefile, e/ou tox e/ou taskipy.
 
 ### Tox
 
@@ -119,15 +125,11 @@ githooks, e/ou Makefile, e/ou tox.
 
 Na Verificação básica engloba:
 - black
+- blue
 - isort
 - pydocstyle
-- pylama
 - mypy
 - pylint
-- py36
-- py37
-- py38
-- py39
 - py310
 - py311
 
@@ -136,7 +138,7 @@ tox
 ```
 #### Verificação dos testes com as versões python disponíveis ####
 ```shell
-tox -e py36,py37,py38,py39,py310,py311
+tox -e py310,py311
 ```
 #### Verificação de três linters apenas no em um módulo ####
 ```shell
@@ -164,13 +166,15 @@ Executa todas as verificações diponíveis contidas no `tox`.
 tox -e ALL
 ```
 
-### Makefile ###
+### Makefile
+
 O `Makefile` foi personalizado para rodar com as opções necessárias.
-Com o help você verá todas as opções.
+Com o help você verá todas as opções. Este comando é exclusivo para linux like.
 ```shell
 make help
 ```
-#### Iniciar ambiente dev ####
+
+#### Iniciar ambiente dev
 Através do `Makefile`, pode-se criar um ambiente virtual para o projeto,
 conforme a versão python predefinida, instalando todas as dependências
 necessárias, além de ativar as configurações em passos simples.
@@ -200,4 +204,36 @@ make docsgen
 #### Verificação de segurança e exposição de motivos
 ```shell
 make safety
+```
+
+
+### Taskipy
+Com `taskipy` as tarefas são definidas puramente com Python em um arquivo
+e pode-se executar rotinas complexas com comandos simples.
+
+```shell
+$ poetry run task -l
+
+bandit          poetry run bandit -c pyproject.toml -r incolume/ test/
+check-all       Checking all
+clean           Shallow clean into environment (.pyc, .cache, .egg, .log, et all)
+clean-all       Deep cleanning into environment (dist, build, htmlcov, .tox, *_cache, et all)
+docs-build      Generate documentation
+docs-serve      Run server documentation
+lint            Checking all linters configurated
+lint_black      Checking with black
+lint_blue       Checking with blue
+lint_flake8     Checking with flake8
+lint_isort      Checking with isort
+lint_mypy       Checking with mypy
+lint_pydocstyle Checking with pydocstyle
+lint_pylint     Checking with pylint
+patch           Generate a patch Sematic Version
+premajor        poetry version premajor
+preminor        poetry version preminor
+prerelease      poetry version prerelease
+safety          Check safety of packages into project.
+sec             Checking environment's safety
+changelog       Update changelog file
+setup           Configure environment develop
 ```
