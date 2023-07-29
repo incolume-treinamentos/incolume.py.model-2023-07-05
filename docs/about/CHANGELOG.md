@@ -36,6 +36,10 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
   - Segurança em caso de vulnerabilidades.;
   - Adicionado ferramenta para Securança de software;
 
+## [1.0.0-rc.6]	 &#8212; 	2023-07-29:
+### Added
+  - Gerador de documentação automatica gha + mkdocs;
+
 ## [1.0.0-rc.5]	 &#8212; 	2023-07-29:
 ### Added
   - Documentação via mkdocs;
@@ -108,4 +112,5 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 [1.0.0-rc.3]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.2...1.0.0-rc.3
 [1.0.0-rc.4]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.3...1.0.0-rc.4
 [1.0.0-rc.5]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.4...1.0.0-rc.5
-[Unreleased]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.5...Unreleased
+[1.0.0-rc.6]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.5...1.0.0-rc.6
+[Unreleased]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.6...Unreleased
