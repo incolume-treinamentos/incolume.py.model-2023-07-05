@@ -36,6 +36,49 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
   - Segurança em caso de vulnerabilidades.;
   - Adicionado ferramenta para Securança de software;
 
+## [1.0.0-rc.5]	 &#8212; 	2023-07-29:
+### Added
+  - Documentação via mkdocs;
+  - Adicionado Ferramentas para QA;
+  - Adicionado ferramentas para validação linters;
+  - Automação para changelog;
+  - Github actions para atualização da documentação via mkdocs de forma automática e independente do Sistema Operacional;
+  - Adicionado testes automatos via Github Actions;
+### Changed
+  - Melhoria na descrição dos comandos automatizados;
+  - Atualizado o link de referencia da licensa de software, com referência a documentação do projeto;
+  - Documentação atualizada;
+### Deprecated
+  - Remover configuração para setup de ambiente virtual;
+### Fixed
+  - Correção na variáveis de configuração para changelog;
+  - Redefinição para captura de valores para changelog;
+### Removed
+  - Removido link na documentação apontando para estrutura git de desenvolvimento;
+### Security
+  - Adicionado ferramenta para Securança de software;
+
+## [1.0.0-rc.4]	 &#8212; 	2023-07-28:
+### Added
+  - Documentação via mkdocs;
+  - Adicionado Ferramentas para QA;
+  - Adicionado ferramentas para validação linters;
+  - Automação para changelog;
+  - Github actions para atualização da documentação via mkdocs de forma automática e independente do Sistema Operacional;
+### Changed
+  - Melhoria na descrição dos comandos automatizados;
+  - Atualizado o link de referencia da licensa de software, com referência a documentação do projeto;
+  - Documentação atualizada;
+### Deprecated
+  - Remover configuração para setup de ambiente virtual;
+### Fixed
+  - Correção na variáveis de configuração para changelog;
+  - Redefinição para captura de valores para changelog;
+### Removed
+  - Removido link na documentação apontando para estrutura git de desenvolvimento;
+### Security
+  - Adicionado ferramenta para Securança de software;
+
 ## [1.0.0-rc.3]	 &#8212; 	2023-07-17:
 ### Changed
   - Documentação atualizada;
@@ -63,4 +106,6 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 [1.0.0-rc.1]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.0...1.0.0-rc.1
 [1.0.0-rc.2]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.1...1.0.0-rc.2
 [1.0.0-rc.3]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.2...1.0.0-rc.3
-[Unreleased]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.3...Unreleased
+[1.0.0-rc.4]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.3...1.0.0-rc.4
+[1.0.0-rc.5]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.4...1.0.0-rc.5
+[Unreleased]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.5...Unreleased
