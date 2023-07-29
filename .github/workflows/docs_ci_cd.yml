@@ -36,7 +36,7 @@ jobs:
           echo test, and deploy your project.
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: 3.x
 
@@ -45,13 +45,6 @@ jobs:
           python -m pip install -U poetry
           poetry install
 
-      - name: Configure repository access
+      - name: Generate a documentation
         run: |
-          poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
-          poetry config repositories.testpypi https://test.pypi.org/legacy/
-          poetry config pypi-token.testpypi ${{ secrets.TEST_PYPI_TOKEN }}
-
-      - name: Build package version
-        run: |
-          poetry build
           poetry run mkdocs gh-deploy --config-file mkdocs.yml --remote-branch webdoc
