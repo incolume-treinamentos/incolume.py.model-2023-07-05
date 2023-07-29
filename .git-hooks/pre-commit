@@ -1,0 +1,13 @@
+#!/bin/bash
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+REGEX="^((enhancement|feature|feat|bug|bugfix|fix|refactor)\/(epoch|issue)#\
+([0-9]+)|dev)$"
+
+if ! [[ $BRANCH =~ $REGEX ]]; then
+  echo "Your commit was rejected due to branching name incompatible with \
+rules."
+  echo "Please rename your branch with '<(enhancement|feature|feat|bug|bugfix\
+|fix)>/issue#<id-issue>' syntax"
+  exit 1
+fi
