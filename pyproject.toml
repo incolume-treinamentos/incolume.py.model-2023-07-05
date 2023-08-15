@@ -420,8 +420,6 @@ safety={help='Check safety of packages into project.', cmd='poetry run safety ch
 pre_sec={help='Securance validations', cmd='poetry run task bandit && poetry run task safety'}
 sec={help="Checking environment's safety", cmd=''}
 pre_changelog='poetry run pytest -m fast'
-#changelog={help='Update changelog file', cmd='poetry run gcl docs/about/CHANGELOG.md -u https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare && echo CHANGELOG file updated with success.', user_vars=true}
 changelog = {help='Update changelog file', cmd = "poetry run gcl {CHANGELOGFILE} -u {URLCOMPARE} && echo CHANGELOG file - {CHANGELOGFILE} - updated with success.;echo", use_vars = true }
 xpto = { cmd = "echo {path} {CHANGELOGFILE} {URLCOMPARE}", use_vars = true }
-#xpto1 = {help='Update changelog file', cmd = "poetry run gcl {CHANGELOGFILE} -u {URLCOMPARE} && echo File {CHANGELOGFILE} updated with success.;echo", use_vars = true }
 setup = { help = 'Configure environment develop', cmd='git config core.hooksPath .git-hooks/'}
