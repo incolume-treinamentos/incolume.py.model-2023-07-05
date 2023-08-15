@@ -12,7 +12,7 @@ if ! [[ "$MESSAGE" =~ $COMMITFORMAT ]]; then
   message+="\nfix!: #4321 chore example comment with possible breaking change"
   message+="\nchore!: #4321 chore example comment with possible breaking change"
   message+="\nrefactor(chore)!: #4321 chore example comment with possible breaking change"
-  message+="\n\nMore details on docs/COMMITS.md or https://www.conventionalcommits.org/pt-br/v1.0.0/"
+  message+="\n\nMore details on docs/user_guide/CONVENTIONAL_COMMITS.md or https://www.conventionalcommits.org/pt-br/v1.0.0/"
   echo -e "\033[1;31mERROR: $message\033[0m";
   exit 1
 fi
