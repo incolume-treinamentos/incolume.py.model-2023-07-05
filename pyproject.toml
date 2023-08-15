@@ -391,7 +391,7 @@ CHANGELOGFILE = "docs/about/CHANGELOG.md"
 URLCOMPARE = "https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare"
 
 [tool.taskipy.tasks]
-bandit={help='', cmd='poetry run bandit -c pyproject.toml -r incolume/ test/'}
+bandit={help='', cmd='poetry run bandit -c pyproject.toml -r {path}', use_vars=true}
 pre_check-all = {cmd='echo Starting Check all ..', help=''}
 check-all = {cmd='poetry run task clean-all; poetry run task lint; poetry run task sec',  help = "Checking all" }
 post_check-all = {cmd='echo Checking finished!', help=''}

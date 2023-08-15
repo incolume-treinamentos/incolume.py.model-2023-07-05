@@ -25,15 +25,22 @@ Este projeto segue as recomendações descritas em
 
 ## Iniciando ambiente de desenvolvimento
 
-Para definir a versão do Python para o ambiente,
+Para definir a versão do Python para o ambiente, considerando o uso do poetry,
 e instalar as dependências execute os comandos abaixo:
 
     $ poetry env use 3.10
     $ poetry install
 
 Estes comandos criarão um ambiente virtual em Python, na versão especificada,
-e instalará todas as dependências fixadas em `pyproject.toml` com suas
+apresentada no exemplo como 3.10, e instalará todas as dependências fixadas em `pyproject.toml` com suas
 restrições especificadas em `poetry.lock`.
+
+Após o ambiente criado com suas dependências instaladas, execute o comando:
+
+    $ poetry run task setup
+
+Este comando garantirá que os hooks do projeto sejam ativados, e executados nos eventos apropriados.
+
 
 ## Qualidade de Código
 
