@@ -422,4 +422,5 @@ sec={help="Checking environment's safety", cmd=''}
 pre_changelog='poetry run pytest'
 changelog={help='Update changelog file', cmd='poetry run gcl docs/about/CHANGELOG.md -u https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare && echo CHANGELOG file updated with success.', user_vars=true}
 xpto = { cmd = "echo {path} {CHANGELOGFILE} {URLCOMPARE}", use_vars = true }
+xpto1 = {help='Update changelog file', cmd = "poetry run gcl {CHANGELOGFILE} -u {URLCOMPARE} && echo File {CHANGELOGFILE} updated with success.;echo", use_vars = true }
 setup = { help = 'Configure environment develop', cmd='git config core.hooksPath .git-hooks/'}
