@@ -16,11 +16,11 @@ Este projeto segue as recomendações descritas em
 
 ## Prerequisitos
 
-- Sistema Operacional Linux Like ou WSL
+- Sistema Operacional Linux Like (preferencialmente) ou WSL
 - git client
 - python 3.10+
 - pyenv
-- pip or poetry (preferencialmente)
+- poetry 1.2.0+ (preferencialmente) ou pip
 
 
 ## Iniciando ambiente de desenvolvimento
