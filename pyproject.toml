@@ -422,5 +422,4 @@ sec={help="Checking environment's safety", cmd=''}
 pre_changelog='poetry run pytest -m fast'
 changelog = {help='Update changelog file', cmd = "poetry run gcl {CHANGELOGFILE} -u {URLCOMPARE} && echo CHANGELOG file - {CHANGELOGFILE} - updated with success.;echo", use_vars = true }
 xpto = { cmd = "echo {path} {CHANGELOGFILE} {URLCOMPARE}", use_vars = true }
-#xpto1 = {cmd = 'poetry run blue --check {path}', use_vars = true}
 setup = { help = 'Configure environment develop', cmd='git config core.hooksPath .git-hooks/'}
