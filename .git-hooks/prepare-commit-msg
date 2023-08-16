@@ -22,19 +22,24 @@ import sys
 
 def get_story():
     """Return the story id number associated with the current branch"""
-    branchname = subprocess.check_output(["/usr/bin/git", "symbolic-ref", "HEAD"])
+    branchname = subprocess.check_output(
+        ["/usr/bin/git", "symbolic-ref", "HEAD"]).strip()
+    print('branchame', branchname)
     # This looks like: refs/heads/12345678/my-cool-feature
     args = branchname.split('/')
+    print('args', args)
     if len(args) != 4:
         raise ValueError("Branch name not in expected format")
     story = int(branchname.split('/')[2])
+    print('story', story)
     return story
 
 
 def prepend_commit_msg(text):
     """Prepend the commit message with `text`"""
+    print('text', text)
     msgfile = sys.argv[1]
-
+    print('msgfile', msgfile)
     with open(msgfile) as f:
         contents = f.read()
 
@@ -53,6 +58,7 @@ def main():
         prepend_commit_msg(header)
     except:
         pass
+
 
 if __name__ == '__main__':
     main()
