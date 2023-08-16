@@ -35,16 +35,17 @@ def prepend_commit_msg():
     logging.debug('msgfile', msgfile)
     with open(msgfile) as f:
         contents = f.read()
-    if not re.match(COMMITFORMAT, contents):
-        raise AssertionError
 
-
-def run():
     try:
-        prepend_commit_msg()
+        if not bool(re.match(COMMITFORMAT, contents)):
+            raise AssertionError
     except AssertionError:
         print(MESSAGERROR)
         exit(1)
+
+
+def run():
+    prepend_commit_msg()
 
 
 if __name__ == '__main__':
