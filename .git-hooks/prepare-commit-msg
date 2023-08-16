@@ -35,7 +35,7 @@ def prepend_commit_msg():
     print('msgfile', msgfile)
     with open(msgfile) as f:
         contents = f.read()
-    if not re.split(COMMITFORMAT, contents, flags=re.I):
+    if re.split(COMMITFORMAT, contents, flags=re.I):
         raise AssertionError
 
 
