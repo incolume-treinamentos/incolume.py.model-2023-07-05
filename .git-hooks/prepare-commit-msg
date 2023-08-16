@@ -30,7 +30,7 @@ def get_story():
     print('args', len(args), args)
     if len(args) != 4:
         raise ValueError("Branch name not in expected format")
-    story = int(branchname.split('/')[2])
+    story = int(branchname.split('#')[-1])
     print('story', story)
     return story
 
@@ -52,12 +52,12 @@ def prepend_commit_msg(text):
 
 def main():
     # Fail silently
-    try:
-        story = get_story()
-        header = "[#%d] " % story
-        prepend_commit_msg(header)
-    except:
-        pass
+    # try:
+    story = get_story()
+    header = "[#%d] " % story
+    prepend_commit_msg(header)
+    # except:
+    #     pass
 
 
 if __name__ == '__main__':
