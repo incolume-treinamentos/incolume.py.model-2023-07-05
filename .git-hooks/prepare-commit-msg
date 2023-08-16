@@ -27,7 +27,7 @@ def get_story():
     print('branchame', branchname)
     # This looks like: refs/heads/12345678/my-cool-feature
     args = branchname.split('/')
-    print('args', args)
+    print('args', len(args), args)
     if len(args) != 4:
         raise ValueError("Branch name not in expected format")
     story = int(branchname.split('/')[2])
