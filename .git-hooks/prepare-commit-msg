@@ -52,12 +52,12 @@ def prepend_commit_msg(text):
 
 def main():
     # Fail silently
-    # try:
-    story = get_story()
-    header = "[#%d] " % story
-    prepend_commit_msg(header)
-    # except:
-    #     pass
+    try:
+        story = get_story()
+        header = "[#%d] " % story
+        prepend_commit_msg(header)
+    except:
+        pass
 
 
 if __name__ == '__main__':
