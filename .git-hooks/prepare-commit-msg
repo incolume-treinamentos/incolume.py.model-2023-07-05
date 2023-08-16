@@ -9,8 +9,7 @@ COMMITFORMAT = (r"^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|"
                 r"(Merge|Bumping|Revert)) (.*)$")
 
 
-def error_msg():
-    message = ("""\033[91m
+MESSAGERROR = ("""\033[91m
     Your commit was rejected due to the commit message. Skipping...
 
     Please use the following format:
@@ -28,7 +27,6 @@ def error_msg():
 
     More details on docs/user_guide/CONVENTIONAL_COMMITS.md or https://www.conventionalcommits.org/pt-br/v1.0.0/
     \033[0m""")
-    return message
 
 
 def prepend_commit_msg():
@@ -45,7 +43,7 @@ def run():
     try:
         prepend_commit_msg()
     except AssertionError:
-        print(error_msg())
+        print(MESSAGERROR)
         exit(1)
 
 
