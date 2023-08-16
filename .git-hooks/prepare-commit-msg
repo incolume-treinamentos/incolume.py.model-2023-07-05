@@ -25,7 +25,7 @@ def get_story():
     branchname = subprocess.check_output(
         ["/usr/bin/git", "symbolic-ref", "HEAD"]).strip()
     print('branchame', branchname)
-    # This looks like: refs/heads/12345678/my-cool-feature
+    # This looks like: refs/heads/enhancement/epoch#1692184207
     args = branchname.split('/')
     print('args', len(args), args)
     if len(args) != 4:
