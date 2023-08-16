@@ -1,0 +1,50 @@
+#!/usr/bin/python
+import subprocess
+import sys
+import re
+
+COMMITFORMAT = (r"^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|"
+                r"perf|ci|build|revert|other)(\((.*)\))?\!?: #([0-9]+)|"
+                r"(Merge|Bumping|Revert)) (.*)$")
+
+
+def error_msg():
+    message = ("""Your commit was rejected due to the commit message. Skipping...
+
+    Please use the following format:
+    <type>(optional scope): #id-issue <description>
+
+    types: feat, fix, chore, refactor, docs, style, test, perf, ci, build and revert
+
+    Examples:
+    #1-> git commit -m 'feature: #1234 feature example comment'
+    #2-> git commit -m 'fix(ui): #4321 bugfix example comment'
+    #3-> git commit -m 'fix!: #4321 chore example comment with possible breaking change'
+    #4-> git commit -m 'chore!: #4321 chore example comment with possible breaking change'
+    #5-> git commit -m 'refactor(chore)!: #4321 chore example comment with possible breaking change'
+    #6-> git commit -m 'chore(bugfix)!: #4321 drop support for Python 2.6' -m 'BREAKING CHANGE: Some features not available in Python 2.7-.'
+
+    More details on docs/user_guide/CONVENTIONAL_COMMITS.md or https://www.conventionalcommits.org/pt-br/v1.0.0/
+    """)
+    return message
+
+
+def prepend_commit_msg():
+    """Prepend the commit message with `text`."""
+    msgfile = sys.argv[1]
+    print('msgfile', msgfile)
+    with open(msgfile) as f:
+        contents = f.read()
+    if not re.split(COMMITFORMAT, contents, flags=re.I):
+        raise AssertionError
+
+
+def run():
+    try:
+        prepend_commit_msg()
+    except AssertionError:
+        print(error_msg())
+
+
+if __name__ == '__main__':
+    run()
