@@ -52,7 +52,7 @@ feat(api)!: send an email to the customer when a product is shipped
 ```shell
 chore!: drop support for Python 2.6
 
-BREAKING CHANGE: use JavaScript features not available in Node 6.
+BREAKING CHANGE: Some features not available in Python 2.7-.
 ```
 
 ## Commit message with no body

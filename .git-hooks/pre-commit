@@ -8,6 +8,6 @@ if ! [[ $BRANCH =~ $REGEX ]]; then
   echo "Your commit was rejected due to branching name incompatible with \
 rules."
   echo "Please rename your branch with '<(enhancement|feature|feat|bug|bugfix\
-|fix)>/epoch#<id-issue>' syntax"
+|fix)>/epoch#<timestamp>' syntax"
   exit 1
 fi
