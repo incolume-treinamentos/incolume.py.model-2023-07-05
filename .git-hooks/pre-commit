@@ -3,7 +3,6 @@
 """this run Python 2.7."""
 
 import subprocess
-import sys
 import re
 import logging
 import platform
