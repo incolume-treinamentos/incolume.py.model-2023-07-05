@@ -1,4 +1,4 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-print('\n\033[32mBoa! Continue o bom trabalho com a força, Jedi!\033[0m\n')
+print('\n\033[92mBoa! Continue o bom trabalho com a força, Jedi!\033[0m\n')
