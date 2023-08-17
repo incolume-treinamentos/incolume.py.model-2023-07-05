@@ -5,7 +5,7 @@ import re
 import logging
 
 
-COMMITFORMAT = r'^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|perf|ci|build|revert|other)(\((.*)\))?\!?: #([0-9]+)|(Merge|Bumping|Revert)) (.*(\n\n.*)?)$'
+COMMITFORMAT = r'^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|perf|ci|build|revert|other)(\((.*)\))?\!?: #([0-9]+)|(Merge|Bumping|Revert)) (.*(\n\n.*)*)$'
 
 
 MESSAGERROR = """\033[91m
