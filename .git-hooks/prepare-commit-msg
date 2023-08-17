@@ -41,7 +41,7 @@ def prepend_commit_msg():
             raise AssertionError
     except AssertionError:
         print(MESSAGERROR)
-        exit(1)
+        sys.exit(1)
 
 
 def run():

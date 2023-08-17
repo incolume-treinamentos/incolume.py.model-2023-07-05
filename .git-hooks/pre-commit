@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 """this run Python 2.7."""
-
+import sys
 import subprocess
 import re
 import logging
@@ -19,7 +19,7 @@ def run():
         print "\033[91mYour commit was rejected due to branching name incompatible with rules.\033[0m"
         print "\033[91mPlease rename your branch with '<(enhancement|feature|feat|bug|bugfix|fix)>/epoch#<timestamp>' syntax\033[0m"
         print
-        exit(1)
+        sys.exit(1)
 
 
 if __name__ == '__main__':  # pragma: no cover
