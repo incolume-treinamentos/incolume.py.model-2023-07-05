@@ -1,3 +1,4 @@
-#!/bin/sh
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
-echo 'Boa! Continue o bom trabalho com a força, Jedi!'
+print('\n\033[32mBoa! Continue o bom trabalho com a força, Jedi!\033[0m\n')
