@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.DEBUG)
 COMMITFORMAT = r'^(((Merge|Bumping|Revert)|(bugfix|build|chore|ci|docs|feat|feature|fix|other|perf|refactor|revert|style|test)(\(.*\))?\!?: #[0-9]+) .*(\n\n.*)*)$'
 
 MESSAGESUCCESS = "\033[92m{}\033[0m".format("Commit message is validated [OK]")
-MESSAGERROR = """\033[91m
+MESSAGERROR = "\033[91m{}\033[0m".format("""
     Your commit was rejected due to the invalid commit message...
 
     Please use the following format:
@@ -27,8 +27,7 @@ MESSAGERROR = """\033[91m
     #6-> git commit -m 'refactor(chore)!: #4321 chore example comment with possible breaking change'
     #7-> git commit -m 'chore(fix)!: #4321 drop support for Python 2.6' -m 'BREAKING CHANGE: Some features not available in Python 2.7-.'
 
-    More details on docs/user_guide/CONVENTIONAL_COMMITS.md or https://www.conventionalcommits.org/pt-br/v1.0.0/
-    \033[0m"""
+    More details on docs/user_guide/CONVENTIONAL_COMMITS.md or https://www.conventionalcommits.org/pt-br/v1.0.0/""")
 
 
 def prepend_commit_msg():
