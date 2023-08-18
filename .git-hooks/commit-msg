@@ -3,11 +3,25 @@
 import sys
 
 
-def run():
+def check():
     print("Number of arguments: %d" % len(sys.argv))
     print("Arguments List: %s" % str(sys.argv))
-    print('\n\033[92mBoa! Continue o bom trabalho com a força, Jedi!\033[0m\n')
 
 
-if __name__ == '__main__':    # pragma: no cover
+def get_msg(idx=0):
+    """"""
+    msg = [
+        'Boa! Continue trabalhando campeão!',
+        'Boa! Continue o bom trabalho com a força, Jedi!',
+    ]
+    print('\n\033[92m{}\033[0m\n'.format(msg[idx]))
+
+
+def run():
+    """run it."""
+    check()
+    get_msg()
+
+
+if __name__ == '__main__':  # pragma: no cover
     run()
