@@ -20,7 +20,7 @@ def get_msg(idx=0):
 def run():
     """run it."""
     check()
-    get_msg()
+    get_msg(1)
 
 
 if __name__ == '__main__':  # pragma: no cover
