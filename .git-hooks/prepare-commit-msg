@@ -11,7 +11,7 @@ COMMITFORMAT = r'^(((Merge|Bumping|Revert)|(bugfix|build|chore|ci|docs|feat|feat
 
 MESSAGESUCCESS = "\033[92m{}\033[0m".format("Commit message is validated [OK]")
 MESSAGERROR = """\033[91m
-    Your commit was rejected due to the commit message. Skipping...
+    Your commit was rejected due to the invalid commit message...
 
     Please use the following format:
     <type>(optional scope): #id-issue <description>
