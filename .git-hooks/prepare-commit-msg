@@ -39,8 +39,10 @@ def prepend_commit_msg():
         contents = f.read()
         logging.debug('%s', contents)
 
+    regex = re.compile(COMMITFORMAT, flags=re.I)
+    logging.debug('%s', str(regex))
     try:
-        if not re.match(COMMITFORMAT, contents):
+        if not regex.match(contents):
             raise AssertionError
     except AssertionError:
         print(MESSAGERROR)
