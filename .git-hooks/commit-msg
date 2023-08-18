@@ -1,4 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import sys
 
-print('\n\033[92mBoa! Continue o bom trabalho com a força, Jedi!\033[0m\n')
+
+def run():
+    print("Number of arguments: %d" % len(sys.argv))
+    print("Arguments List: %s" % str(sys.argv))
+    print('\n\033[92mBoa! Continue o bom trabalho com a força, Jedi!\033[0m\n')
+
+
+if __name__ == '__main__':    # pragma: no cover
+    run()
