@@ -4,6 +4,7 @@ import sys
 import re
 import logging
 
+logging.basicConfig(level=logging.DEBUG)
 
 COMMITFORMAT = r'^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|perf|ci|build|revert|other)(\((.*)\))?\!?: #([0-9]+)|(Merge|Bumping|Revert)) (.*(\n\n.*)*)$'
 
@@ -35,6 +36,7 @@ def prepend_commit_msg():
     logging.debug('msgfile', msgfile)
     with open(msgfile) as f:
         contents = f.read()
+        logging.debug('%s', contents)
 
     try:
         if not re.match(COMMITFORMAT, contents):
