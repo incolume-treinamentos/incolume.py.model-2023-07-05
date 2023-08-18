@@ -6,7 +6,8 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
-COMMITFORMAT = r'^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|perf|ci|build|revert|other)(\((.*)\))?\!?: #([0-9]+)|(Merge|Bumping|Revert)) (.*(\n\n.*)*)$'
+# COMMITFORMAT = r'^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|perf|ci|build|revert|other)(\((.*)\))?\!?: #([0-9]+)|(Merge|Bumping|Revert)) (.*(\n\n.*)*)$'
+COMMITFORMAT = r'^(.*)$'
 
 
 MESSAGERROR = """\033[91m
