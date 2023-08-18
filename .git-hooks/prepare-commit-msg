@@ -4,8 +4,10 @@ import sys
 import re
 import logging
 
+logging.basicConfig(level=logging.DEBUG)
 
-COMMITFORMAT = r'^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|perf|ci|build|revert|other)(\((.*)\))?\!?: #([0-9]+)|(Merge|Bumping|Revert)) (.*(\n\n.*)*)$'
+# COMMITFORMAT = r'^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|perf|ci|build|revert|other)(\((.*)\))?\!?: #([0-9]+)|(Merge|Bumping|Revert)) (.*(\n\n.*)*)$'
+COMMITFORMAT = r'^(((Merge|Bumping|Revert)|(bugfix|build|chore|ci|docs|feat|feature|fix|other|perf|refactor|revert|style|test)(\(.*\))?\!?: #[0-9]+) .*(\n\n.*)*)$'
 
 
 MESSAGERROR = """\033[91m
@@ -32,9 +34,10 @@ MESSAGERROR = """\033[91m
 def prepend_commit_msg():
     """Prepend the commit message with `text`."""
     msgfile = sys.argv[1]
-    logging.debug('msgfile', msgfile)
+    logging.debug('msgfile: %s', msgfile)
     with open(msgfile) as f:
         contents = f.read()
+        logging.debug('%s', contents)
 
     try:
         if not re.match(COMMITFORMAT, contents):
