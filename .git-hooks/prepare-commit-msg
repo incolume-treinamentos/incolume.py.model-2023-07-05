@@ -7,7 +7,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 
 # COMMITFORMAT = r'^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|perf|ci|build|revert|other)(\((.*)\))?\!?: #([0-9]+)|(Merge|Bumping|Revert)) (.*(\n\n.*)*)$'
-COMMITFORMAT = r'^(((Merge|Bumping|Revert)|(bugfix|build|chore|ci|docs|feat|feature|fix|other|perf|refactor|revert|style|test)(\(.*\))?\!?: #[0-9]+) .*(\n\n.*)*)$'
+COMMITFORMAT = r'^(((Merge|Bumping|Revert)|(bugfix|build|chore|ci|docs|feat|feature|fix|other|perf|refactor|revert|style|test)(\(.*\))?\!?: #[0-9]+) .*(\n.*)*)$'
 
 MESSAGESUCCESS = "\033[92m{}\033[0m".format("Commit message is validated [OK]")
 MESSAGERROR = "\033[91m{}\033[0m".format("""
@@ -35,7 +35,7 @@ def prepend_commit_msg():
     msgfile = sys.argv[1]
     logging.debug('msgfile: %s', msgfile)
     with open(msgfile) as f:
-        contents = f.read()
+        contents = f.read().strip()
         logging.debug('%s', contents)
 
     regex = re.compile(COMMITFORMAT, flags=re.I)
