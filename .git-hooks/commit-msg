@@ -13,8 +13,8 @@ def check():
 def get_msg(idx=0, notfixed=True):
     """"""
     msg = [
-        'Executado com sucesso.',
         'Boa! Continue trabalhando campeão!',
+        'Executado com sucesso.',
         'Boa! Continue o bom trabalho com a força, Jedi!',
     ]
     base = '\n\033[92m{}\033[0m\n'
