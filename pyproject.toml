@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "incolume-py-model-2023-07-05"
-version = "0.19.0a3"
+version = "0.19.0a4"
 description = ""
 authors = ["britodfbr <britodfbr@gmail.com>"]
 license = "MIT"
