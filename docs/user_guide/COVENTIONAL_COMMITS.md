@@ -51,10 +51,10 @@ feat(api)!: send an email to the customer when a product is shipped
 ## Commit message with both ! and BREAKING CHANGE footer
 ```shell
 chore!: drop support for Python 2.6
+
+BREAKING CHANGE: Some features not available in Python 2.7-.
 ```
 
-
-BREAKING CHANGE: use JavaScript features not available in Node 6.
 ## Commit message with no body
 ```shell
 docs: correct spelling of CHANGELOG

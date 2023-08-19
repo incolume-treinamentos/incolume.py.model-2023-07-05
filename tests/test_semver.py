@@ -7,6 +7,7 @@ import pytest
 from incolume.py.model_2023_07_05 import __version__
 
 
+@pytest.mark.fast
 class TestSemVer:
     """Test case class for Sematic Versions."""
 
