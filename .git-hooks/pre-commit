@@ -20,6 +20,11 @@ def run():
         print "\033[91mPlease rename your branch with '<(enhancement|feature|feat|bug|bugfix|fix)>/epoch#<timestamp>' syntax\033[0m"
         print
         sys.exit(1)
+    else:
+        print
+        print "\033[92mbranching name rules. [OK]\033[0m"
+        print
+        sys.exit(0)
 
 
 if __name__ == '__main__':  # pragma: no cover
