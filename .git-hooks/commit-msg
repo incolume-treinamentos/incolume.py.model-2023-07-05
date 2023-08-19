@@ -10,7 +10,7 @@ def check():
     print("Arguments List: %s" % str(sys.argv))
 
 
-def get_msg(idx=0, notfixed=True):
+def get_msg(idx=0, notfixed=False):
     """"""
     msg = [
         'Boa! Continue trabalhando campeão!',
@@ -27,7 +27,8 @@ def get_msg(idx=0, notfixed=True):
 def run():
     """run it."""
     # check()
-    get_msg(1)
+    get_msg(2, True)
+    get_msg()
 
 
 if __name__ == '__main__':  # pragma: no cover
