@@ -10,7 +10,7 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ---
 
 
-## [Unreleased]	 &#8212; 	2023-08-15:
+## [Unreleased]	 &#8212; 	2023-08-19:
 ### Added
   - Documentação via mkdocs;
   - Adicionado para novos recursos.;
@@ -19,24 +19,50 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
   - Automação para changelog;
   - Aplicado variáveis task para atualização do arquivo de CHANGELOG;
   - Aplicado Variáveis task para controle de path nos scripts de automação;
+  - Sinalização pytest para testes rápidos (fast);
+  - Mensagens de feedback coloridas para githooks;
+  - Acrescentado carrocel de mensagens;
 ### Fixed
   - Corrigido para qualquer correção de bug.;
   - Correção na variáveis de configuração para changelog;
   - Redefinição para captura de valores para changelog;
 ### Changed
   - Modificado para alterações em recursos existentes.;
+  - Atualização da documentação referente a ativação githooks no ambiente de desenvolvimento;
   - Melhoria na descrição dos comandos automatizados;
   - Atualizado o link de referencia da licensa de software, com referência a documentação do projeto;
+  - Scripts githooks transcritos em Python, para funcionamento em Win/Mac/Lin;
+  - Transcrição de scripts githooks bash -> Python 2.7;
+  - Aplicado variável path a todos as tasks;
+  - Melhoria na descrição do Sistema Operacional e para gerenciador de ambiente virtual;
+  - Ampliado os arquivos para limpeza de ambiente;
   - Documentação atualizada;
 ### Deprecated
   - Obsoleto para recursos que serão removidos nas próximas versões.;
   - Remover configuração para setup de ambiente virtual;
 ### Removed
   - Removido para recursos removidos nesta versão.;
+  - Desativado o commit para coverage_report via task;
+  - Coverage_report retirado do versionamento;
   - Removido link na documentação apontando para estrutura git de desenvolvimento;
 ### Security
   - Segurança em caso de vulnerabilidades.;
   - Adicionado ferramenta para Securança de software;
+
+## [1.0.0-rc.11]	 &#8212; 	2023-08-19:
+### Added
+  - Sinalização pytest para testes rápidos (fast);
+  - Mensagens de feedback coloridas para githooks;
+  - Acrescentado carrocel de mensagens;
+### Changed
+  - Scripts githooks transcritos em Python, para funcionamento em Win/Mac/Lin;
+  - Transcrição de scripts githooks bash -> Python 2.7;
+  - Aplicado variável path a todos as tasks;
+  - Melhoria na descrição do Sistema Operacional e para gerenciador de ambiente virtual;
+  - Ampliado os arquivos para limpeza de ambiente;
+### Removed
+  - Desativado o commit para coverage_report via task;
+  - Coverage_report retirado do versionamento;
 
 ## [1.0.0-rc.10]	 &#8212; 	2023-07-29:
 ### Changed
@@ -135,4 +161,5 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 [1.0.0-rc.8]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.7...1.0.0-rc.8
 [1.0.0-rc.9]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.8...1.0.0-rc.9
 [1.0.0-rc.10]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.9...1.0.0-rc.10
-[Unreleased]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.10...Unreleased
+[1.0.0-rc.11]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.10...1.0.0-rc.11
+[Unreleased]: https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/compare/1.0.0-rc.11...Unreleased
