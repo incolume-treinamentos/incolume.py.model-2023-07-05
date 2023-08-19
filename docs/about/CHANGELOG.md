@@ -67,6 +67,9 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ## [1.0.0-rc.10]	 &#8212; 	2023-07-29:
 ### Changed
   - Correção para Gerador de documentação automatica gha + mkdocs;
+### Deprecated
+  - Retirar o coverage_report do versionamento;
+  - Desativar o commit para coverage_report via task;
 
 ## [1.0.0-rc.9]	 &#8212; 	2023-07-29:
 ### Changed
@@ -119,11 +122,10 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
   - Documentação atualizada;
 ### Deprecated
   - Remover configuração para setup de ambiente virtual;
+  - Remover link na documentação apontando para estrutura git de desenvolvimento;
 ### Fixed
   - Correção na variáveis de configuração para changelog;
   - Redefinição para captura de valores para changelog;
-### Removed
-  - Removido link na documentação apontando para estrutura git de desenvolvimento;
 ### Security
   - Adicionado ferramenta para Securança de software;
 
