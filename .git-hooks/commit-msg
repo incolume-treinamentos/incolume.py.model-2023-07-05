@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """this run Python 2.7."""
 import sys
+import random
 
 
 def check():
@@ -9,13 +10,17 @@ def check():
     print("Arguments List: %s" % str(sys.argv))
 
 
-def get_msg(idx=0):
+def get_msg(idx=0, notfixed=True):
     """"""
     msg = [
         'Boa! Continue trabalhando campeão!',
         'Boa! Continue o bom trabalho com a força, Jedi!',
     ]
-    print('\n\033[92m{}\033[0m\n'.format(msg[idx]))
+    base = '\n\033[92m{}\033[0m\n'
+    if notfixed:
+        print(random.randint(0, len(msg)-1))
+    else:
+        print(base.format(msg[idx]))
 
 
 def run():
