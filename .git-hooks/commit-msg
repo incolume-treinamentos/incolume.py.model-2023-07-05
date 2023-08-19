@@ -10,25 +10,25 @@ def check():
     print("Arguments List: %s" % str(sys.argv))
 
 
-def get_msg(idx=0, notfixed=False):
+def get_msg(idx=0, fixed=False):
     """"""
     msg = [
+        'Boa! Continue o bom trabalho com a força, Jedi!',
         'Boa! Continue trabalhando campeão!',
         'Executado com sucesso.',
-        'Boa! Continue o bom trabalho com a força, Jedi!',
     ]
     base = '\n\033[92m{}\033[0m\n'
-    if notfixed:
-        print(base.format(msg[random.randint(0, len(msg)-1)]))
-    else:
+    if fixed:
         print(base.format(msg[idx]))
+    else:
+        print(base.format(msg[random.randint(0, len(msg)-1)]))
 
 
 def run():
     """run it."""
     # check()
-    get_msg(2, True)
     get_msg()
+    get_msg(0, True)
 
 
 if __name__ == '__main__':  # pragma: no cover
