@@ -324,6 +324,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#blue" class="md-nav__link">
+    blue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flake8" class="md-nav__link">
+    flake8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pylama" class="md-nav__link">
     pylama
   </a>
@@ -809,6 +823,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#blue" class="md-nav__link">
+    blue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flake8" class="md-nav__link">
+    flake8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pylama" class="md-nav__link">
     pylama
   </a>
@@ -1021,14 +1049,18 @@ básicas. Como <em>estilo de formatação de código</em>,</p>
 <li>poetry 1.2.0+ (preferencialmente) ou pip</li>
 </ul>
 <h2 id="iniciando-ambiente-de-desenvolvimento">Iniciando ambiente de desenvolvimento<a class="headerlink" href="#iniciando-ambiente-de-desenvolvimento" title="Permanent link">#</a></h2>
-<p>Para definir a versão do Python para o ambiente,
+<p>Para definir a versão do Python para o ambiente, considerando o uso do poetry,
 e instalar as dependências execute os comandos abaixo:</p>
 <pre><code>$ poetry env use 3.10
 $ poetry install
 </code></pre>
 <p>Estes comandos criarão um ambiente virtual em Python, na versão especificada,
-e instalará todas as dependências fixadas em <code>pyproject.toml</code> com suas
+apresentada no exemplo como 3.10, e instalará todas as dependências fixadas em <code>pyproject.toml</code> com suas
 restrições especificadas em <code>poetry.lock</code>.</p>
+<p>Após o ambiente criado com suas dependências instaladas, execute o comando:</p>
+<pre><code>$ poetry run task setup
+</code></pre>
+<p>Este comando garantirá que os hooks do projeto sejam ativados, e executados nos eventos apropriados.</p>
 <h2 id="qualidade-de-codigo">Qualidade de Código<a class="headerlink" href="#qualidade-de-codigo" title="Permanent link">#</a></h2>
 <p>É utilizado de ferramentas validadoras de qualidade de código estático,
 também denominadas linters.</p>
@@ -1051,8 +1083,18 @@ Depois que o Bandit terminar de escanear todos os arquivos, ele gerará um relat
 <h3 id="black">black<a class="headerlink" href="#black" title="Permanent link">#</a></h3>
 <p>O <code>black</code> é classificado como Autoformator, são programas que
 refatoram seu código para se adequar ao PEP 8 automaticamente.
-<div class="highlight"><pre><span></span><code>black<span class="w"> </span>--check<span class="w"> </span>incolumepy<span class="w"> </span>tests
+<div class="highlight"><pre><span></span><code>black<span class="w"> </span>--check<span class="w"> </span>incolume/<span class="w"> </span>tests/
 </code></pre></div></p>
+<h3 id="blue">blue<a class="headerlink" href="#blue" title="Permanent link">#</a></h3>
+<p>o blue é um autoformatador de código um pouco menos intransigente do
+que o black, e segue a ideia de formatar automaticamente o código
+Python, totalmente inspirada pelo black.</p>
+<div class="highlight"><pre><span></span><code>blue<span class="w"> </span>--check<span class="w"> </span>incolume/<span class="w"> </span>tests/
+</code></pre></div>
+<h3 id="flake8">flake8<a class="headerlink" href="#flake8" title="Permanent link">#</a></h3>
+<p>Flake8 é um envolucro em torno das ferramentas: PyFlakes, pycodestyle e Roteiro McCabe de Ned Batchelder</p>
+<div class="highlight"><pre><span></span><code>flake8<span class="w"> </span>--config<span class="w"> </span>pyproject.toml<span class="w"> </span>incolume/<span class="w"> </span>tests/
+</code></pre></div>
 <h3 id="pylama">pylama<a class="headerlink" href="#pylama" title="Permanent link">#</a></h3>
 <p>O <code>pylama</code> é um envolucro que contém: PyFlakes, pycodestyle, McCabe.
 <div class="highlight"><pre><span></span><code>pylama<span class="w"> </span>incolumepy<span class="w"> </span>tests
