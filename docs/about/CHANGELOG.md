@@ -10,13 +10,15 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ---
 
 
-## [Unreleased]	 &#8212; 	2023-07-23:
+## [Unreleased]	 &#8212; 	2023-08-15:
 ### Added
   - Documentação via mkdocs;
   - Adicionado para novos recursos.;
   - Adicionado Ferramentas para QA;
   - Adicionado ferramentas para validação linters;
   - Automação para changelog;
+  - Aplicado variáveis task para atualização do arquivo de CHANGELOG;
+  - Aplicado Variáveis task para controle de path nos scripts de automação;
 ### Fixed
   - Corrigido para qualquer correção de bug.;
   - Correção na variáveis de configuração para changelog;

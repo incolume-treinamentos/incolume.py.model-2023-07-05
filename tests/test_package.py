@@ -13,6 +13,7 @@ from incolume.py.model_2023_07_05 import (
 __author__ = '@britodfbr'  # pragma: no cover
 
 
+@pytest.mark.fast
 class TestCase:
     """Test case class."""
 
