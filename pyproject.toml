@@ -33,6 +33,7 @@ exclude = [
   "ez_setup",
   "my_package/excluded.py",
   "tests/",
+  "coverage_report",
 ]
 
 
