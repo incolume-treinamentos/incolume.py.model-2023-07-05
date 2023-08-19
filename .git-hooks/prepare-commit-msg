@@ -1,10 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""this run Python 2.7."""
 import sys
 import re
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 
 # COMMITFORMAT = r'^((feat|feature|fix|bugfix|chore|refactor|docs|style|test|perf|ci|build|revert|other)(\((.*)\))?\!?: #([0-9]+)|(Merge|Bumping|Revert)) (.*(\n\n.*)*)$'
 COMMITFORMAT = r'^(((Merge|Bumping|Revert)|(bugfix|build|chore|ci|docs|feat|feature|fix|other|perf|refactor|revert|style|test)(\(.*\))?\!?: #[0-9]+) .*(\n.*)*)$'
