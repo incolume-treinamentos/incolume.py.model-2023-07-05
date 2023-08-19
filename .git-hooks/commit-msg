@@ -27,7 +27,7 @@ def get_msg(idx=0, fixed=False):
 def run():
     """run it."""
     # check()
-    get_msg()
+    # get_msg()
     get_msg(0, True)
 
 
