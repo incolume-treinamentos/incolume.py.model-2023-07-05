@@ -74,10 +74,14 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ## [1.0.0-rc.9]	 &#8212; 	2023-07-29:
 ### Changed
   - Correção para Gerador de documentação automatica gha + mkdocs;
+### Deprecated
+  - Desativar o commit para coverage_report via task;
 
 ## [1.0.0-rc.8]	 &#8212; 	2023-07-29:
 ### Changed
   - Correção para Gerador de documentação automatica gha + mkdocs;
+### Deprecated
+  - Remover diretório coverage_report na limpeza via script task;
 
 ## [1.0.0-rc.7]	 &#8212; 	2023-07-29:
 ### Changed
