@@ -60,3 +60,12 @@ Deseja aprender mais sobre alguns dos requisitos não funcionais utilizados no p
 - [RST - Restructuredtext](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#reference-names)
 - [MD - Markdown](https://www.markdownguide.org/basic-syntax/)
 
+## Licenças de Software
+Duvidas sobre licensas de softwares?
+- https://choosealicense.com/
+
+**Compare as licensas mais comuns nos links abaixo:**
+- [Licenças para software](https://choosealicense.com/licenses/)
+- [Licenças para software formato tabela](https://choosealicense.com/appendix/)
+- [Licenças para não software](https://choosealicense.com/non-software/)
+- [Sem licenças](https://choosealicense.com/no-permission/)
