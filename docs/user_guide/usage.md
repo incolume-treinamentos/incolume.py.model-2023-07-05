@@ -1,113 +1,99 @@
-[![Tests CI/CD](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/tests_ci_cd.yaml/badge.svg)](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/tests_ci_cd.yaml)
-[![publish automatically](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/publish-automatically.yml/badge.svg)](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/publish-automatically.yml)
-[![poetry-mine-publish-automatically](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/poetry-mine-publish-automatically.yml/badge.svg)](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/poetry-mine-publish-automatically.yml)
-[![Poetry Mine Pypi Autopublish](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/poetry-mine-pypi-autopublish.yml/badge.svg)](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/poetry-mine-pypi-autopublish.yml)
-[![Poetry Test PyPI Manual Publish](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/poetry-testpypi-manual-publish.yml/badge.svg?branch=dev)](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/poetry-testpypi-manual-publish.yml)
-[![Poetry Multiprocess](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/poetry-multiprocess.yml/badge.svg)](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/poetry-multiprocess.yml)
-[![tagged-release](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/targged-release.yaml/badge.svg)](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/targged-release.yaml)
-[![Tests/Release](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/tests_new.yml/badge.svg)](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/tests_new.yml)
-[![GWA Flow](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/gwa-flow.yml/badge.svg)](https://github.com/incolumepy-prospections/incolumepy.gwa/actions/workflows/gwa-flow.yml)
+[![Tests CI/CD](https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/tests_ci_cd.yaml/badge.svg)](https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/tests_ci_cd.yaml)
+
+[//]: # ([![publish automatically]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/publish-automatically.yml/badge.svg&#41;]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/publish-automatically.yml&#41;)
+[//]: # ([![poetry-mine-publish-automatically]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/poetry-mine-publish-automatically.yml/badge.svg&#41;]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/poetry-mine-publish-automatically.yml&#41;)
+[//]: # ([![Poetry Mine Pypi Autopublish]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/poetry-mine-pypi-autopublish.yml/badge.svg&#41;]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/poetry-mine-pypi-autopublish.yml&#41;)
+[//]: # ([![Poetry Test PyPI Manual Publish]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/poetry-testpypi-manual-publish.yml/badge.svg?branch=dev&#41;]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/poetry-testpypi-manual-publish.yml&#41;)
+[//]: # ([![Poetry Multiprocess]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/poetry-multiprocess.yml/badge.svg&#41;]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/poetry-multiprocess.yml&#41;)
+[//]: # ([![tagged-release]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/targged-release.yaml/badge.svg&#41;]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/targged-release.yaml&#41;)
+[//]: # ([![Tests/Release]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/tests_new.yml/badge.svg&#41;]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/tests_new.yml&#41;)
+[//]: # ([![GWA Flow]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/gwa-flow.yml/badge.svg&#41;]&#40;https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05/actions/workflows/gwa-flow.yml&#41;)
 
 # incolume.py.model-2023-07-05
-Prospection GitHub Workflows Actions
 
-Contains:
-+ poetry
-+ pytest
-+ coverage
-+ Python multiversions (pyenv)
-+ tox
-+ black
-+ isort
-+ flake8
-+ pylint
-+ pydocstyle
-+ mypy
-+ semver
+
+Details for [scope](../prefacio.md#escopo) and [tool](../prefacio.md#ferramentas-aplicadas).
 
 ---
-## Start Project
-1. Create a github project on github.com;
-2. Clone the project, on local host;
-3. Create the branch dev and branches of control when necessary:
+## Start Use the model
+1. Access https://github.com/incolume-treinamentos/incolume.py.model-2023-07-05.
+1. Click on green button __Use this template__;
+1. Bellow click on __Create a new repository__;
+1. Fill the fields as you wish; finish the create a github project on github.com;
+1. Clone the project, on local host;
+
+1. Create the control's branches:
    ```bash
-   $ git br dev
-   $ git co -b feature#1 dev
-   $ git co -b feature#2 dev
-   $ git co -b bug#2 dev
+   $ git br main
+   $ git br tags
    ```
-4. Configure project structure:
-   1. Set Editor configuration:
-      ```bash
-      $ curl https://pastebin.com/raw/TrDhuvFZ -o .editorconfig # or
-      $ curl https://raw.githubusercontent.com/incolumepy-prospections/incolumepy.gwa/main/.editorconfig -o .editorconfig
-      ```
-   2. Update gitignore:
-      ```bash
-      $ curl https://pastebin.com/raw/C910Dqze -o .gitignore   #or
-      $ curl https://raw.githubusercontent.com/incolumepy-prospections/incolumepy.gwa/main/.gitignore -o .gitignore
-      ```
-    3. Commit changes
-5. Configure poetry:
-   1. Init poetry
-      ```bash
-      $ poetry init    # response that need
-      ```
-   2. Adding package path in configuration:
-    ```bash
-    [tool.poetry]
-      ...
-    packages=[
-        {include = 'incolume/', from=''},
-    ]
+1. Configure environment:
+    ```shell
+   $ poetry env use 3.10
+   $ poetry install
+   $ poetry run task setup
     ```
-   3. Define Python version (3.10+):
-       ```bash
-      Change..
-      [tool.poetry.dependencies]
-      python = "~3.10"
 
-      To ..
-      [tool.poetry.dependencies]
-      python = ~3.10
-       ```
-   4. Commit changes
-6. Configure unit tests with pytest:
-   1. Install pytest
+2. Change configuration:
+   1. Set a new project name and version:
       ```bash
-      $ poetry add -D pytest     ## adding pytest
-      $ poetry add -D pytest-cov     ## adding pytest-cov
-      ```
-   2. Create tests structure
-      ```bash
-      $ cd incolumepy.gwa;    # home_project
-      $ mkdir tests       # create directory
-      $ > conftest.py     # create file
-      $ > __init__.py     # create file
-      ```
-   3. Add test environment
-      ```bash
-      $  git add -f poetry.lock pyproject.toml  tests/
-      ```
-   4. Commit changes
+      $ vim pyproject.toml
 
-## Linters and Checkers
-1. Adding lint/control tools
-   1. ```bash
-      $ poetry add -D black flake8 isort mypy pydocstyle pylint pytest-cov tox[tomli]
-      $ git ci -m "Adding tox and lint tools" poetry.lock pyproject.toml
+      [tool.poetry]
+      name = "incolume-py-model-2023-07-05"
+      version = 1.111.0
       ```
-2. Configure code coverage
-   1. Edit _pyproject.toml_, add on end file.
-   ```bash
-   $ ...
-   [tool.pytest.ini_options]
-   addopts = "--cov=incolumepy.gwa"
-   testpaths = [
-      "tests",
-   ]
+      ```shell
+      $ cat pyproject.toml
 
+      [tool.poetry]
+      name = "incolume.py.abc"
+      version = 0.1.0
+
+      ```
+
+   2. rename path project:
+      ```bash
+      git mv incolume/py/model_2023_07_05/ incolume/py/abc
+      ```
+   3. Commit changes
+
+    ```shell
+   # the way wished
+   $ git co -b enhancement/epoch#$(date +%s);
+   $ git ci -m 'chore: #0 Atualização do projeto.'
+   $ git co dev
+   $ git merge --no-ff enhancement/epoch#0000000000000
+   $ poetry run task preminor
+   $ poetry run task patch
    ```
+   ```shell
+   # easy way
+   git ci -m 'chore: #0 Atualização do projeto.'
+   poetry run task preminor
+   poetry run task patch
+   ```
+
+4. Commit changes
+
+## Tests, Linters and Checkers
+1. For run tests:
+    ```shell
+    $ poetry run pytest  # run all
+    ```
+   ```shell
+   $ poetry run pytest -vv tests/test_skell.py::TestSkellCase::test_kwargs  # run one
+   $ poetry run pytest -vv tests/test_skell.py::TestSkellCase  # run class
+   $ poetry run pytest -vv tests/test_skell.py  # run file
+   ```
+
+1. For run linters:
+    ```shell
+    $ poetry run task linter
+    ```
+
+===
+
 3. Configure pylint tool
    1. Edit _pyproject.toml_, add on end file.
    ```bash
