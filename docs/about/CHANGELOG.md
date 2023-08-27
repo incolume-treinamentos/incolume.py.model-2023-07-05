@@ -10,15 +10,17 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ---
 
 
-## [Unreleased]	 &#8212; 	2023-08-20:
+## [Unreleased]	 &#8212; 	2023-08-26:
 ### Added
   - Adicionado para novos recursos.;
 ### Fixed
   - Corrigido para qualquer correção de bug.;
 ### Changed
   - Modificado para alterações em recursos existentes.;
+  - Tratativa para atingir supremacia Python no projeto;
 ### Deprecated
   - Obsoleto para recursos que serão removidos nas próximas versões.;
+  - Scripts bash retirados do controle de versão;
 ### Removed
   - Removido para recursos removidos nesta versão.;
 ### Security
