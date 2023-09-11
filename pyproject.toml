@@ -269,7 +269,7 @@ unfixable = ["B"]
 convention = "google"
 
 [tool.ruff.flake8-quotes]
-docstring-quotes = "single"
+docstring-quotes = "double"    # ""single"
 
 [tool.isort]
 profile = "black"
@@ -493,6 +493,7 @@ lint_isort={help='Checking with isort', cmd='echo --isort--; poetry run isort --
 lint_mypy={help='Checking with mypy', cmd='echo --mypy--; poetry run mypy --check {path}', use_vars=true}
 lint_pydocstyle={help='Checking with pydocstyle', cmd='echo --pydocstyle--; poetry run pydocstyle {path}', use_vars=true}
 lint_pylint={help='Checking with pylint', cmd='echo --pylint--; poetry run pylint {path}', use_vars=true}
+lint_ruff={help='', cmd='echo --ruff--; poetry run ruff check {path}', use_vars=true}
 pre_patch={help='Run linters tools', cmd="poetry run task lint"}
 patch={cmd='v=$(poetry version patch) && poetry run pytest && git ci -m "$v" pyproject.toml $(find incolume* -name version.txt)', help='Generate a patch Sematic Version'}
 post_patch={help='Run securety tools', cmd="poetry run task bandit && poetry run task safety"}
