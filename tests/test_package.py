@@ -2,7 +2,6 @@
 
 
 import pytest
-
 from incolume.py.model_2023_07_05 import (
     __version__,
     configfile,
@@ -10,15 +9,15 @@ from incolume.py.model_2023_07_05 import (
     versionfile,
 )
 
-__author__ = '@britodfbr'  # pragma: no cover
+__author__ = "@britodfbr"  # pragma: no cover
 
 
-@pytest.mark.fast
+@pytest.mark.fast()
 class TestCase:
     """Test case class."""
 
     @pytest.mark.parametrize(
-        'entrance',
+        "entrance",
         (
             configfile,
             versionfile,
@@ -26,10 +25,10 @@ class TestCase:
     )
     def test_exists(self, entrance):
         """Test if exists files."""
-        assert entrance.exists(), f'{entrance=}'
+        assert entrance.exists(), f"{entrance=}"
 
     @pytest.mark.parametrize(
-        'entrance',
+        "entrance",
         (
             configfile,
             versionfile,
@@ -37,10 +36,10 @@ class TestCase:
     )
     def test_is_file(self, entrance):
         """Test if are files."""
-        assert entrance.is_file(), f'{entrance=}'
+        assert entrance.is_file(), f"{entrance=}"
 
     @pytest.mark.parametrize(
-        'entrance',
+        "entrance",
         (
             configfile,
             versionfile,
@@ -49,8 +48,8 @@ class TestCase:
     def test_same_version(self, entrance):
         """Test same version."""
         try:
-            with entrance.open('rb') as stream:
-                version = load(stream)['tool']['poetry']['version']
+            with entrance.open("rb") as stream:
+                version = load(stream)["tool"]["poetry"]["version"]
         except ValueError:
             version = entrance.read_text().strip()
         assert version == __version__

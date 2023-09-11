@@ -5,15 +5,15 @@ import typing
 
 
 def skell(
-    *args: typing.Any, **kwargs: typing.Any
+    *args: typing.Any, **kwargs: typing.Any,
 ) -> typing.Dict[str, typing.Any]:
     """Esqueleto de função.
 
-    args:
+    Args:
         args: Argumentos.
         kwargs: Argumentos chaveados.
 
-    returns:
+    Returns:
         Um dicionário com os argumentos de entrada.
 
     Examples:
@@ -23,9 +23,9 @@ def skell(
         >>> skell(a=1, b=2, c=3)
         {'args': (), 'a': 1, 'b': 2, 'c': 3}
     """
-    result = {'args': args, **kwargs}
+    result = {"args": args, **kwargs}
     logging.debug(result)
-    logging.info('Args: {%s}, kwargs: {%s}', bool(args), bool(kwargs))
+    logging.info("Args: {%s}, kwargs: {%s}", bool(args), bool(kwargs))
     return result
 
 
@@ -35,11 +35,11 @@ class Skell:
     def __init__(self, *args: typing.Any, **kwargs: typing.Any) -> None:
         """Esqueleto de função.
 
-        args:
+        Args:
             args: Argumentos.
             kwargs: Argumentos chaveados.
 
-        returns:
+        Returns:
             Um dicionário com os argumentos de entrada.
 
         Examples:
@@ -55,7 +55,7 @@ class Skell:
             >>> skell.__dict__
             {'args': (1, 2, 3), 'a': 1, 'b': 2, 'c': 3}
         """
-        self.__dict__.update({'args': args})
+        self.__dict__.update({"args": args})
         self.__dict__.update(kwargs)
 
 
@@ -64,5 +64,5 @@ def run():
     skell(1, 2, 3, a=7)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run()

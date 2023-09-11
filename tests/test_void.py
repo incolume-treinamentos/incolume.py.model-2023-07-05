@@ -7,24 +7,23 @@ import pytest
 
 def test_void(capsys):
     """Test void."""
-
-    print('oi')
+    print("oi")
     out, err = capsys.readouterr()
-    assert out.strip() == 'oi'
-    assert err == ''
+    assert out.strip() == "oi"
+    assert err == ""
 
 
 @pytest.mark.parametrize(
-    'entrance',
+    "entrance",
     (
-        'oi',
-        'hi',
-        'python',
+        "oi",
+        "hi",
+        "python",
     ),
 )
 def test_none(capsys, entrance):
     """Test none."""
     print(entrance)
     out, err = capsys.readouterr()
-    logging.debug('%s, %s', out, err)
+    logging.debug("%s, %s", out, err)
     assert out.strip() == entrance
