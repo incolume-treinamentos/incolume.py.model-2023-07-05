@@ -78,6 +78,7 @@ pylint = "^2.17.4"
 tox = "*"
 pydocstyle = "^6.3.0"
 taskipy = "^1.11.0"
+ruff = "^0.0.287"
 
 [build-system]
 requires = ["poetry-core"]
@@ -187,7 +188,88 @@ exclude_lines = [
   "__author__",
   "class IElements"
 ]
+[tool.ruff]
+# Decrease the maximum line length to 79 characters.
+line-length = 79
+src = ["incolume/", "tests/"]
+select = [
+  "A",    #flake8-builtins
+  "AIR",    #Airflow
+  "ANN",    #flake8-annotations
+  "ARG",    #flake8-unused-arguments
+  "ASYNC",    #flake8-async
+  "B",    #flake8-bugbear
+  "BLE",    #flake8-blind-except
+  "C4",    #flake8-comprehensions
+  "C90",    #mccabe
+  "COM",    #flake8-commas
+  "CPY",    #flake8-copyright
+  "D",   # pydocstyle
+  "DJ",    #flake8-django
+  "DTZ",    #flake8-datetimez
+  "E",   # pycodestyle
+  "W",    #pycodestyle
+  "EM",    #flake8-errmsg
+  "ERA",    #eradicate
+  "EXE",    #flake8-executable
+  "F",   # pyflakes
+  "FA",    #flake8-future-annotations
+  "FBT",    #flake8-boolean-trap
+  "FIX",    #flake8-fixme
+  "FLY",    #flynt
+  "FURB",    #refurb
+  "G",    #flake8-logging-format
+  "I",    #isort
+  "ICN",    #flake8-import-conventions
+  "INP",    #flake8-no-pep420
+  "INT",    #flake8-gettext
+  "ISC",    #flake8-implicit-str-concat
+  "N",    #pep8-naming
+  "NPY",    #NumPy-specific rules
+  "PD",    #pandas-vet
+  "PERF",    #Perflint
+  "PGH",    #pygrep-hooks
+  "PIE",    #flake8-pie
+  "PL",    #Pylint
+  "PT",    #flake8-pytest-style
+  "PTH",    #flake8-use-pathlib
+  "PYI",    #flake8-pyi
+  "Q",    #flake8-quotes
+  "RET",    #flake8-return
+  "RSE",    #flake8-raise
+  "RUF",    #Ruff-specific rules
+  "S",    #flake8-bandit
+  "SIM",    #flake8-simplify
+  "SLF",    #flake8-self
+  "SLOT",    #flake8-slots
+  "T10",    #flake8-debugger
+  "T20",    #flake8-print
+  "TCH",    #flake8-type-checking
+  "TD",    #flake8-todos
+  "TID",    #flake8-tidy-imports
+  "TRY",    #tryceratops
+  "UP",  # pyupgrade
+  "YTT",    #flake8-2020
+]
 
+# Never enforce `E501` (line length violations).
+#ignore = ["E501"]
+
+# Avoid trying to fix flake8-bugbear (`B`) violations.
+unfixable = ["B"]
+
+[tool.ruff.per-file-ignores]
+# Ignore `E402` (import violations) in all `__init__.py` files, and in `path/to/file.py`.
+#"__init__.py" = ["E402"]
+#"path/to/file.py" = ["E402"]
+#"**/{tests,docs,tools}/*" = ["E402"]
+
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "double"    # ""single"
 
 [tool.isort]
 profile = "black"
@@ -411,6 +493,7 @@ lint_isort={help='Checking with isort', cmd='echo --isort--; poetry run isort --
 lint_mypy={help='Checking with mypy', cmd='echo --mypy--; poetry run mypy --check {path}', use_vars=true}
 lint_pydocstyle={help='Checking with pydocstyle', cmd='echo --pydocstyle--; poetry run pydocstyle {path}', use_vars=true}
 lint_pylint={help='Checking with pylint', cmd='echo --pylint--; poetry run pylint {path}', use_vars=true}
+lint_ruff={help='', cmd='echo --ruff--; poetry run ruff check {path}', use_vars=true}
 pre_patch={help='Run linters tools', cmd="poetry run task lint"}
 patch={cmd='v=$(poetry version patch) && poetry run pytest && git ci -m "$v" pyproject.toml $(find incolume* -name version.txt)', help='Generate a patch Sematic Version'}
 post_patch={help='Run securety tools', cmd="poetry run task bandit && poetry run task safety"}

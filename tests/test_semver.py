@@ -7,7 +7,7 @@ import pytest
 from incolume.py.model_2023_07_05 import __version__
 
 
-@pytest.mark.fast
+@pytest.mark.fast()
 class TestSemVer:
     """Test case class for Sematic Versions."""
 
@@ -16,7 +16,7 @@ class TestSemVer:
         assert re.fullmatch(semver_regex, __version__, re.I)
 
     @pytest.mark.parametrize(
-        ['entrance', 'expected'],
+        ('entrance', 'expected'),
         (
             (__version__, True),
             ('1', False),
@@ -39,7 +39,6 @@ class TestSemVer:
             ('1.0.1-dev.2', True),
             ('1.0.1-alpha.0', True),
             ('1.0.1-alpha.266', True),
-            ('1.0.1-dev.0', True),
             ('1.0.1-beta.0', True),
             ('1.1.1-alpha.99999', True),
             ('11111.1.1-rc.99999', True),
@@ -58,7 +57,7 @@ class TestSemVer:
                     semver_regex,
                     entrance,
                     flags=re.I,
-                )
+                ),
             )
             == expected
         )

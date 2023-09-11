@@ -23,7 +23,7 @@ class TestCaseUtils:
         ),
     )
     def test_type_color(self, entrance, expected):
-        """test it."""
+        """Test it."""
         assert entrance == expected
 
     @pytest.mark.parametrize(

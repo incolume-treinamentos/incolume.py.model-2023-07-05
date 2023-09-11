@@ -28,10 +28,6 @@ class TestSkellCase:
                 {'a': '1', 'b': 2, 'c': 3},
                 {'a': '1', 'args': (), 'b': 2, 'c': 3},
             ),
-            (
-                {'a': '1', 'b': 2, 'c': 3},
-                {'a': '1', 'args': (), 'b': 2, 'c': 3},
-            ),
         ),
     )
     def test_kwargs(self, entrance, expected):
@@ -46,11 +42,6 @@ class TestSkellCase:
                 (1, 2, 3),
                 {},
                 {'args': (1, 2, 3)},
-            ),
-            pytest.param(
-                (),
-                {'a': '1', 'b': 2, 'c': 3},
-                {'a': '1', 'args': (), 'b': 2, 'c': 3},
             ),
             pytest.param(
                 (),

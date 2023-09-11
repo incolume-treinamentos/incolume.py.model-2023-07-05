@@ -7,7 +7,6 @@ import pytest
 
 def test_void(capsys):
     """Test void."""
-
     print('oi')
     out, err = capsys.readouterr()
     assert out.strip() == 'oi'

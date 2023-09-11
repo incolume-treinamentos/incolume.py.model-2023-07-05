@@ -5,15 +5,16 @@ import typing
 
 
 def skell(
-    *args: typing.Any, **kwargs: typing.Any
+    *args: typing.Any,
+    **kwargs: typing.Any,
 ) -> typing.Dict[str, typing.Any]:
     """Esqueleto de função.
 
-    args:
+    Args:
         args: Argumentos.
         kwargs: Argumentos chaveados.
 
-    returns:
+    Returns:
         Um dicionário com os argumentos de entrada.
 
     Examples:
@@ -35,11 +36,11 @@ class Skell:
     def __init__(self, *args: typing.Any, **kwargs: typing.Any) -> None:
         """Esqueleto de função.
 
-        args:
+        Args:
             args: Argumentos.
             kwargs: Argumentos chaveados.
 
-        returns:
+        Returns:
             Um dicionário com os argumentos de entrada.
 
         Examples:
